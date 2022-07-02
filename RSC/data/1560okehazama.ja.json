@@ -1,0 +1,838 @@
+{
+    "property" : {
+	"revision": 5.1,
+        "author" : "Kamonasu",
+	"mail" : "info@geoglyph.info",
+	"datetime" : "2022-03-10T06:00:01+09:00"
+    },
+    "scene" : {
+        "name" : "桶狭間の合戦",
+	"description" : "桶狭間の合戦 織田 VS 今川",
+	"timestring" : "永禄3年5月19日",
+	"starttime" : "1560-06-12T06:02:01+09:00",
+	"latlng" : [ 35.077950165614475, 136.95818424224856 ],
+	"zoom" : 14
+    },
+    "configure" : {
+	"weapon" : "okehazamaweapon.json",
+	"formation" : "okehazamaformation.json",
+	"item" : null,
+	"skill" : null,
+	"damagepernodes" : 0.00023
+    },
+    "corps" : {
+      	"oda" : {
+	    "name" : "織田軍",
+	    "description" : "尾張　２０万石" ,
+	    "general" : "odanobunaga",
+	    "color" : "#9A9200"
+	},
+      	"imagawa" : {
+	    "name" : "今川軍",
+	    "description" : "駿河　４０万石" ,
+	    "general" : "imagawayoshimoto",
+	    "color" : "#012A68"
+	}
+    },
+    "units" : {
+	"odanobunaga" : {
+	    "name" : "織田信長" ,
+	    "corps" : "oda" ,
+	    "description" : "大将 騎馬隊" ,
+	    "hostility" : ["imagawa"],
+	    "ability" : {
+		"leadership" : 100,
+		"attack" : 100,
+		"defense" : 100,
+		"searching" : 100,
+		"luck" : 100,
+		"speed" : {
+		    "max" : 32.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow","matchlock","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.15598605057665, 136.89874649047854 ],
+		"command" : ["formation column","speed 18","route 35.137037 136.900463 35.125876 136.907501 35.102496 136.928444 35.094104 136.942992 35.091154 136.94943 35.087476 136.951307 35.082516 136.95857 35.080865 136.958613 35.077985 136.954043 35.077314, 136.95444 35.07727, 136.953979"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "oda_nobunaga.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"odahidetoshi" : {
+	    "name" : "織田秀敏" ,
+	    "corps" : "oda" ,
+	    "description" : "鷲津砦　守備隊" ,
+	    "hostility" : ["imagawa"],
+	    "ability" : {
+		"leadership" : 38,
+		"attack" : 45,
+		"defense" : 24,
+		"searching" : 10,
+		"luck" : 90,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.068634, 136.942134],
+		"command" : ["formation line","weapon bow","route 35.069187 136.941555"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 40,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_red.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#e57373",
+		    "fillcolor" : "#4dd0e1",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"sakumamorishige" : {
+	    "name" : "佐久間盛重" ,
+	    "corps" : "oda" ,
+	    "description" : "丸根砦 守備隊" ,
+	    "hostility" : ["imagawa"],
+	    "ability" : {
+		"leadership" : 64,
+		"attack" : 77,
+		"defense" : 61,
+		"searching" : 10,
+		"luck" : 85,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.06423439110391, 136.94550275802615 ],
+		"command" : ["formation line","weapon bow","route 35.063716 136.945245"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_red.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#e57373",
+		    "fillcolor" : "#4dd0e1",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"sakumanobumori" : {
+	    "name" : "佐久間信盛" ,
+	    "corps" : "oda" ,
+	    "description" : "善照寺砦　守備隊" ,
+	    "hostility" : ["imagawa"],
+	    "ability" : {
+		"leadership" : 78,
+		"attack" : 62,
+		"defense" : 43,
+		"searching" : 10,
+		"luck" : 88,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.0814621570986, 136.9574546813965 ],
+		"command" : ["wait"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 20,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_red.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#e57373",
+		    "fillcolor" : "#4dd0e1",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"mizunotadamitsu" : {
+	    "name" : "水野忠光" ,
+	    "corps" : "oda" ,
+	    "description" : "丹下砦　守備隊" ,
+	    "hostility" : ["imagawa"],
+	    "ability" : {
+		"leadership" : 39,
+		"attack" : 67,
+		"defense" : 57,
+		"searching" : 10,
+		"luck" : 94,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.08682, 136.950449 ],
+		"command" : ["wait"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 20,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_red.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#e57373",
+		    "fillcolor" : "#4dd0e1",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"kajigawatakahide" : {
+	    "name" : "梶川高秀" ,
+	    "corps" : "oda" ,
+	    "description" : "中島砦　守備隊" ,
+	    "hostility" : ["imagawa"],
+	    "ability" : {
+		"leadership" : 42,
+		"attack" : 46,
+		"defense" : 39,
+		"searching" : 10,
+		"luck" : 89,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [  35.076946, 136.95393 ],
+		"command" : ["wait"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 10,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_red.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#e57373",
+		    "fillcolor" : "#4dd0e1",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"imagawayoshimoto" : {
+	    "name" : "今川義元" ,
+	    "corps" : "imagawa" ,
+	    "description" : "大将 騎馬隊" ,
+	    "hostility" : ["oda"],
+	    "ability" : {
+		"leadership" : 100,
+		"attack" : 100,
+		"defense" : 100,
+		"searching" : 100,
+		"luck" : 10,
+		"speed" : {
+		    "max" : 20.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.06850215824029, 137.02126979827884 ],
+		"command" : ["formation column","speed 6","route 35.070188 137.021184 35.070241 137.019188 35.067975 137.01715 35.064954 137.011828 35.064111 137.008181 35.059721 137.005477 35.053836 136.997645 35.047741 136.993117 35.053151 136.983547 35.055435 136.972175"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "imagawa_yoshimoto.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"matsudairamotoyasu" : {
+	    "name" : "松平元康" ,
+	    "corps" : "imagawa" ,
+	    "description" : "先鋒　丸根砦攻略" ,
+	    "hostility" : ["oda"],
+	    "ability" : {
+		"leadership" : 99,
+		"attack" : 86,
+		"defense" : 90,
+		"searching" : 10,
+		"luck" : 10,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.06379530775177, 136.93642616271975 ],
+		"command" : ["formation line","weapon bow","route 35.062267 136.937284 35.062706 136.944902 35.063308 136.945127"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "tokugawa_ieyasu.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#fff176",
+		    "fillcolor" : "#64b5f7",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"okabemotonobu" : {
+	    "name" : "岡部元信" ,
+	    "corps" : "imagawa" ,
+	    "description" : "鳴海城　守備隊",
+	    "hostility" : ["oda"],
+	    "ability" : {
+		"leadership" : 80,
+		"attack" : 74,
+		"defense" : 71,
+		"searching" : 10,
+		"luck" : 24,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.081384, 136.949977 ],
+		"command" : ["wait"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_yellow.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#fff176",
+		    "fillcolor" : "#64b5f7",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	"asahinayasutomo" : {
+	    "name" : "朝比奈泰朝" ,
+	    "corps" : "imagawa" ,
+	    "description" : "先鋒　鷲津砦攻略",
+	    "hostility" : ["oda"],
+	    "ability" : {
+		"leadership" : 72,
+		"attack" : 68,
+		"defense" : 59,
+		"searching" : 20,
+		"luck" : 20,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "sword","bow" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 35.06453296643438, 136.9351387023926 ],
+		"command" : ["formation line","weapon bow","route 35.06246 136.937134 35.062847 136.94061 35.06657 136.940846 35.068941 136.93898 35.070153 136.940653"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 100
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 3.0,
+		"marker" : {
+		    "image" : "default_yellow.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#fff176",
+		    "fillcolor" : "#64b5f7",
+		    "radius" : 4
+		}
+	    }
+	}
+    },
+    "map" : {
+	"field" : {
+	    "river" : {
+		"style" : {
+		    "color" : "#80D8FF",
+		    "weight" : 1,
+		    "lineCap" : "butt",
+		    "fill" : true,
+		    "fillColor" : "#80D8FF",
+		    "fillOpacity" : 0.5
+		},
+		"keepout" : true,
+		"speedratio"  : 0,
+		"attackratio" : 0,
+		"defenseratio" : 0,
+		"fatigueratio" : 0,
+		"geometry" : "okehazama_river.geojson"
+	    }
+	},
+	"structure" : {
+	    "kiyosujyo" : {
+		"name" : "清州城",
+		"description" : "織田家本城",
+		"owner" : "oda",
+		"endurance" : 1000,
+		"latlng" : [ 35.21696200876609,136.84095025062564],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "catsle_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"kamiokad.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 300
+	    },
+	    "atsutajingu" : {
+		"name" : "熱田神宮",
+		"owner" : "non",
+		"description" : "とても古い神社",
+		"endurance" : 100,
+		"latlng" : [ 35.1255247934279,136.90930366516116 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "shrine_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"kamigamoshrine.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 300
+	    },
+	    "narumijyo" : {
+		"name" : "鳴海城",
+		"owner" : "imagawa",
+		"description" : "今川家の重要拠点",
+		"endurance" : 100,
+		"latlng" : [ 35.08160702350056,136.95016980171206 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "catsle_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"kamiokad.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "narumi_castle.geojson"
+	    },
+	    "washizutoride" : {
+		"name" : "鷲津砦",
+		"owner" : "oda",
+		"description" : "大高城への最前線",
+		"endurance" : 40,
+		"latlng" : [ 35.068291, 136.94267 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "washizu_fort.geojson"
+	    },
+	    "ootakajyo" : {
+		"name" : "大高城",
+		"owner" : "imagawa",
+		"description" : "今川家の守りの要",
+		"endurance" : 300,
+		"latlng" : [ 35.064287, 136.936061 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "catsle_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"kamiokad.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "ootaka_castle.geojson"
+	    },
+	    "kutsukaketoride" : {
+		"name" : "沓掛城",
+		"owner" : "imagawa",
+		"description" : "今川家の守りの要",
+		"endurance" : 300,
+		"latlng" : [ 35.068919263428356,137.02180624008182 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "catsle_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"kamiokad.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "kutsukake_castle.geojson"
+	    },
+	    "zensyoujitoride" : {
+		"name" : "善照寺砦",
+		"owner" : "oda",
+		"description" : "まもりのかなめ",
+		"endurance" : 50,
+		"latlng" : [ 35.08158507406226,136.9572883844376 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "zensyoji_fort.geojson"
+	    },
+	    "marunetoride" : {
+		"name" : "丸根砦",
+		"owner" : "oda",
+		"description" : "まもりのかなめ",
+		"endurance" : 40,
+		"latlng" : [ 35.064577, 136.945138 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "marune_fort.geojson"
+	    },
+	    "nakajimatoride" : {
+		"name" : "中嶋砦",
+		"owner" : "oda",
+		"description" : "まもりのかなめ",
+		"endurance" : 50,
+		"latlng" : [ 35.076913001714715,136.95410594344142 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "nakajima_fort.geojson"
+	    },
+	    "tangetoride" : {
+		"name" : "丹下砦",
+		"owner" : "oda",
+		"description" : "まもりのかなめ",
+		"endurance" : 50,
+		"latlng" : [ 35.08688788670947,136.95062041282657 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "tange_fort.geojson"
+	    },
+	    "nagoyajyo" : {
+		"name" : "那古野城",
+		"owner" : "oda",
+		"description" : "まもりのかなめ",
+		"endurance" : 1000,
+		"latlng" : [ 35.18434021336429,136.90253376960757 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "catsle_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"kamiokad.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 300
+	    },
+	    "kasaderajyo" : {
+		"name" : "笠寺城",
+		"owner" : "oda",
+		"description" : "普通の平城",
+		"endurance" : 50,
+		"latlng" : [ 35.090498255169734,136.9348865747452 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "murakitoride" : {
+		"name" : "村木砦",
+		"owner" : "oda",
+		"description" : "普通の砦",
+		"endurance" : 50,
+		"latlng" : [ 34.996477877716785,136.9688540697098 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "yagura_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"asuketoride.glb",
+		    "scale":1.5,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    }
+	}
+    }
+}

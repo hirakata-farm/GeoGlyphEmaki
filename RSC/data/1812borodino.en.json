@@ -1,0 +1,1690 @@
+{
+    "property" : {
+	"revision": 5.1,
+        "author" : "Kamonasu",
+	"mail" : "info@geoglyph.info",
+	"datetime" : "2022-04-27T06:00:01+09:00"
+    },
+    "scene" : {
+        "name" : "Battle of Borodino",
+	"description" : "Napoleon's French invasion of Russia.",
+	"timestring" : "7/Sep/1812",
+	"starttime" : "1812-09-07T06:00:01+03:00",
+	"latlng" : [ 55.508708, 35.831223 ],
+	"zoom" : 13
+    },
+    "configure" : {
+	"weapon" : "napoleon1800weapon.json",
+	"formation" : "napoleon1800formation.json",
+	"item" : null,
+	"skill" : null,
+	"damagepernodes" : 0.00007
+    },
+    "corps" : {
+      	"france" : {
+	    "name" : "France Empire",
+	    "description" : "Napoleonic France" ,
+	    "general" : "napoleon",
+	    "color" : "#478800"
+	},
+      	"russia" : {
+	    "name" : "Imperial Russia",
+	    "description" : "Imperial Russia" ,
+	    "general" : "kutuzov",
+	    "color" : "#D52B1E"
+	}
+    },
+    "units" : {
+	"napoleon" : {
+	    "name" : "Napoleon Bonaparte" ,
+	    "corps" : "france" ,
+	    "description" : "He was Emperor of the French from 1804 until 1814" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 100,
+		"attack" : 100,
+		"defense" : 100,
+		"searching" : 100,
+		"luck" : 100,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cavalry","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.508295, 35.791976 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "napoleon-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps1" : {
+	    "name" : "Louis-Nicolas Davout" ,
+	    "corps" : "france" ,
+	    "description" : "1st Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 70,
+		"attack" : 84,
+		"defense" : 65,
+		"searching" : 72,
+		"luck" : 79,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.504285, 35.803328 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps1division1" : {
+	    "name" : "Morand" ,
+	    "corps" : "france" ,
+	    "description" : "1st Corps 1st Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 80,
+		"attack" : 84,
+		"defense" : 73,
+		"searching" : 83,
+		"luck" : 73,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.517699, 35.806417 ],
+		"command" : ["formation line","weapon cannon","route 55.518719 35.814056"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps1division2" : {
+	    "name" : "Friant" ,
+	    "corps" : "france" ,
+	    "description" : "1st Corps 2nd Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 81,
+		"attack" : 60,
+		"defense" : 80,
+		"searching" : 71,
+		"luck" : 76,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.501198, 35.803542 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps1division3" : {
+	    "name" : "Gérard" ,
+	    "corps" : "france" ,
+	    "description" : "1st Corps 3rd Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 72,
+		"attack" : 80,
+		"defense" : 71,
+		"searching" : 71,
+		"luck" : 76,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.521197, 35.803499 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps1division4" : {
+	    "name" : "Dessaix" ,
+	    "corps" : "france" ,
+	    "description" : "1st Corps 4th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 70,
+		"attack" : 61,
+		"defense" : 83,
+		"searching" : 82,
+		"luck" : 62,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.501562, 35.806589 ],
+		"command" : ["formation line","weapon cannon","route 55.502243 35.814142"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,		
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps1division5" : {
+	    "name" : "Compans" ,
+	    "corps" : "france" ,
+	    "description" : "1st Corps 5th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 74,
+		"attack" : 74,
+		"defense" : 72,
+		"searching" : 77,
+		"luck" : 71,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.504212, 35.806589 ],
+		"command" : ["formation line","weapon cannon","route 55.504576, 35.815258"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps3" : {
+	    "name" : "Michel Ney" ,
+	    "corps" : "france" ,
+	    "description" : "3rd Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 84,
+		"attack" : 68,
+		"defense" : 72,
+		"searching" : 60,
+		"luck" : 90,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.511381, 35.800452 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps3division10" : {
+	    "name" : "Ledru" ,
+	    "corps" : "france" ,
+	    "description" : "3rd Corps 10th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 70,
+		"attack" : 78,
+		"defense" : 73,
+		"searching" : 83,
+		"luck" : 78,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.508854, 35.805688 ],
+		"command" : ["formation line","weapon cannon","route 55.508951 35.814915"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps3division11" : {
+	    "name" : "Razout" ,
+	    "corps" : "france" ,
+	    "description" : "3rd Corps 11th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 82,
+		"attack" : 82,
+		"defense" : 64,
+		"searching" : 72,
+		"luck" : 71,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.512645, 35.805044 ],
+		"command" : ["formation line","weapon cannon","route 55.513714 35.814743"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps3division25" : {
+	    "name" : "Württemberg" ,
+	    "corps" : "france" ,
+	    "description" : "3rd Corps 25th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 83,
+		"attack" : 72,
+		"defense" : 81,
+		"searching" : 71,
+		"luck" : 80,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.510846, 35.80307 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps4" : {
+	    "name" : "Eugène de Beauharnais" ,
+	    "corps" : "france" ,
+	    "description" : "4th Corps of Italy" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 77,
+		"attack" : 78,
+		"defense" : 61,
+		"searching" : 84,
+		"luck" : 71,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.528145, 35.787363 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps4division13" : {
+	    "name" : "Delzons" ,
+	    "corps" : "france" ,
+	    "description" : "4th Corps 13th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 60,
+		"attack" : 84,
+		"defense" : 82,
+		"searching" : 65,
+		"luck" : 80,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.527027, 35.801697 ],
+		"command" : ["formation line","weapon cannon","route 55.525764 35.808649 55.526347 35.815172"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps4division14" : {
+	    "name" : "Broussier" ,
+	    "corps" : "france" ,
+	    "description" : "4th Corps 14th Division of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 69,
+		"attack" : 68,
+		"defense" : 82,
+		"searching" : 80,
+		"luck" : 72,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.522388, 35.796676 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,	    
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps5" : {
+	    "name" : "Józef Poniatowski" ,
+	    "corps" : "france" ,
+	    "description" : "5th Corps of Polish" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 75,
+		"attack" : 74,
+		"defense" : 81,
+		"searching" : 83,
+		"luck" : 80,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.480313, 35.81131 ],
+		"command" : ["formation line","weapon cannon","route 55.483547 35.821095"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecorps8" : {
+	    "name" : "Jean-Andoche Junot" ,
+	    "corps" : "france" ,
+	    "description" : "8th Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 65,
+		"attack" : 78,
+		"defense" : 68,
+		"searching" : 66,
+		"luck" : 72,
+		"speed" : {
+		    "max" : 30.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "bayonet","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.511867, 35.792341 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 80,
+		"distance" : 5.0,	    
+		"marker" : {
+		    "image" : "France-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecavalry1" : {
+	    "name" : "Nansouty" ,
+	    "corps" : "france" ,
+	    "description" : "1st Cavalry Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 78,
+		"attack" : 84,
+		"defense" : 80,
+		"searching" : 71,
+		"luck" : 81,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.497333, 35.802383 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 7.0,
+		"marker" : {
+		    "image" : "France-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecavalry2" : {
+	    "name" : "Montbrun" ,
+	    "corps" : "france" ,
+	    "description" : "2nd Cavalry Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 64,
+		"attack" : 70,
+		"defense" : 63,
+		"searching" : 83,
+		"luck" : 83,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.494318, 35.795946 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 7.0,
+		"marker" : {
+		    "image" : "France-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecavalry3" : {
+	    "name" : "Grouchy" ,
+	    "corps" : "france" ,
+	    "description" : "3rd Cavalry Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 71,
+		"attack" : 82,
+		"defense" : 69,
+		"searching" : 71,
+		"luck" : 70,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.519788, 35.790453 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 7.0,
+		"marker" : {
+		    "image" : "France-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"francecavalry4" : {
+	    "name" : "Latour-Maubourg" ,
+	    "corps" : "france" ,
+	    "description" : "4th Cavalry Corps of French Empire" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 77,
+		"attack" : 81,
+		"defense" : 66,
+		"searching" : 84,
+		"luck" : 77,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.492665, 35.803671 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 7.0,
+		"marker" : {
+		    "image" : "France-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+
+	
+	"kutuzov" : {
+	    "name" : "Mikhail Kutuzov" ,
+	    "corps" : "russia" ,
+	    "description" : "Field Marshal of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 100,
+		"attack" : 100,
+		"defense" : 100,
+		"searching" : 100,
+		"luck" : 10,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cavalry","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.532371, 35.849376 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "mikhail-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps2" : {
+	    "name" : "Karl Gustav von Baggovut" ,
+	    "corps" : "russia" ,
+	    "description" : "2nd Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 50,
+		"attack" : 78,
+		"defense" : 70,
+		"searching" : 61,
+		"luck" : 46,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.540045, 35.866156 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps3" : {
+	    "name" : "Nikolay Tuchkov" ,
+	    "corps" : "russia" ,
+	    "description" : "3rd Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 77,
+		"attack" : 63,
+		"defense" : 72,
+		"searching": 61,
+		"luck" : 66,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.487413, 35.832467 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps4" : {
+	    "name" : "Alexander Ivanovich Ostermann-Tolstoy" ,
+	    "corps" : "russia" ,
+	    "description" : "4th Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 63,
+		"attack" : 62,
+		"defense" : 66,
+		"searching" : 57,
+		"luck" : 51,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.537131, 35.853367 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps5" : {
+	    "name" : "Konstantin Konstantinovich" ,
+	    "corps" : "russia" ,
+	    "description" : "5th Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 63,
+		"attack" : 73,
+		"defense" : 60,
+		"searching" : 73,
+		"luck" : 50,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.517796, 35.851564 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps6" : {
+	    "name" : "Dmitry Sergeyevich Dokhturov" ,
+	    "corps" : "russia" ,
+	    "description" : "6th Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 76,
+		"attack" : 53,
+		"defense" : 70,
+		"searching" : 74,
+		"luck" : 63,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.519266, 35.832167 ],
+		"command" : ["formation line","weapon cannon","route 55.520711, 35.826845"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,		
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps7" : {
+	    "name" : "Nikolay Raevsky" ,
+	    "corps" : "russia" ,
+	    "description" : "7th Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 71,
+		"attack" : 50,
+		"defense" : 74,
+		"searching" : 59,
+		"luck" : 59,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.512985, 35.835171 ],
+		"command" : ["formation line","weapon cannon","route 55.512839 35.830364"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacorps8" : {
+	    "name" : "Mikhail Borozdin" ,
+	    "corps" : "russia" ,
+	    "description" : "8th Corps of Imperial Russia" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 73,
+		"attack" : 78,
+		"defense" : 55,
+		"searching" : 61,
+		"luck" : 55,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.50584, 35.83266 ],
+		"command" : ["formation line","weapon cannon","route 55.506278 35.828991 55.507298 35.825558"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"barclay" : {
+	    "name" : "Michael Andreas Barclay de Tolly" ,
+	    "corps" : "russia" ,
+	    "description" : "Imperial Russian soldier of Baltic German and Scottish origin" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 71,
+		"attack" : 68,
+		"defense" : 75,
+		"searching" : 67,
+		"luck" : 53,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.528728, 35.859547 ],
+		"command" : ["wait","formation line","weapon cannon"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,	    
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"bagration" : {
+	    "name" : "Pyotr Bagration" ,
+	    "corps" : "russia" ,
+	    "description" : "Russian general and prince of Georgian origin" ,
+	    "hostility" : ["france"],
+	    "ability" : {
+		"leadership" : 67,
+		"attack" : 67,
+		"defense" : 70,
+		"searching" : 65,
+		"luck" : 57,
+		"speed" : {
+		    "max" : 16.0,
+		    "normal" : 8.0
+		}
+	    },
+	    "weapon" : [ "musket","cannon" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.496458, 35.858345 ],
+		"command" : ["formation line","weapon cannon","route 55.501465 35.848904 55.503069 35.826759"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 100,
+		"distance" : 5.0,		
+		"marker" : {
+		    "image" : "Russia-infantry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacavalry1" : {
+	    "name" : "Uvarov" ,
+	    "corps" : "russia" ,
+	    "description" : "1st Cavalry Corps of Imperial Russia" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 52,
+		"attack" : 58,
+		"defense" : 77,
+		"searching" : 76,
+		"luck" : 50,
+		"speed" : {
+		    "max" : 50.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.540094, 35.878773 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 8.0,
+		"marker" : {
+		    "image" : "Russia-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacavalry2" : {
+	    "name" : "Korff" ,
+	    "corps" : "russia" ,
+	    "description" : "2nd Cavalry Corps of Imperial Russia" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 77,
+		"attack" : 67,
+		"defense" : 69,
+		"searching" : 77,
+		"luck" : 56,
+		"speed" : {
+		    "max" : 50.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.533488, 35.865641 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 8.0,
+		"marker" : {
+		    "image" : "Russia-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacavalry3" : {
+	    "name" : "Kreutz" ,
+	    "corps" : "russia" ,
+	    "description" : "3rd Cavalry Corps of Imperial Russia" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 53,
+		"attack" : 53,
+		"defense" : 54,
+		"searching" : 56,
+		"luck" : 41,
+		"speed" : {
+		    "max" : 50.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.52523, 35.841608 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 8.0,
+		"marker" : {
+		    "image" : "Russia-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"russiacavalry4" : {
+	    "name" : "Sievers" ,
+	    "corps" : "russia" ,
+	    "description" : "4th Cavalry Corps of Imperial Russia" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 79,
+		"attack" : 63,
+		"defense" : 70,
+		"searching" : 51,
+		"luck" : 60,
+		"speed" : {
+		    "max" : 50.0,
+		    "normal" : 20.0
+		}
+	    },
+	    "weapon" : [ "cavalry" ],
+	    "formation" : [ "column","line","square","invertedwedge","wedge" ],
+	    "initialize" : {
+		"latlng" :  [ 55.516435, 35.841265 ],
+		"command" : ["wait","formation line","weapon cavalry"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" : 1000
+	    },
+	    "node" : {
+		"strength" : 30,
+		"distance" : 8.0,
+		"marker" : {
+		    "image" : "Russia-cavalry-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": null,
+		    "scale":1.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	}
+    },
+    "map" : {
+	"field" : null,
+	"structure" : {
+	    "raevskiredoubt" : {
+		"name" : "Raevski redoubt",
+		"description" : "Raevski redoubt",
+		"owner" : "russia",
+		"endurance" : 300,
+		"latlng" : [ 55.519254, 35.829635 ],
+		"stock" : {
+		    "ration" :  0,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "defensive-wall32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":2.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "raevski_redoubt.geojson"
+	    },
+	    "bagrationfleches" : {
+		"name" : "Bagration fleches",
+		"owner" : "russia",
+		"description" : "Bagration fleches",
+		"endurance" : 200,
+		"latlng" : [ 55.507347, 35.82633 ],
+		"stock" : {
+		    "ration" :  0,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "defensive-wall32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":2.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": "bagration_fleches.geojson"
+	    }
+	}
+    }
+}

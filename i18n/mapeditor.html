@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Geoglyph Emaki Map Editor</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="anonymous"/>
+ 
+<link rel="stylesheet" href="../libs/leaflet.draw.css" charset="utf-8">
+<link rel="stylesheet" href="../libs/Control.SimpleMarkers.css" />
+<link rel="stylesheet" href="../libs/Leaflet.Dialog.css"/>
+<link rel="stylesheet" href="../libs/leaflet.contextmenu.css"/>
+
+<!-- jQuery API -->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin="anonymous"></script>
+
+<script src="../libs/leaflet.draw.js" charset="utf-8"></script>
+<script src="../libs/leaflet.geometryutil.js" charset="utf-8"></script>
+<script src="../libs/Control.SimpleMarkers.js"></script>
+<script src="../libs/Leaflet.Dialog.js"></script>
+<script src="../libs/leaflet.contextmenu.js"></script>
+
+<!-- Materialize -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>
+
+<style>
+body {
+ padding: 0;
+ margin: 0;
+}
+html, body {
+ height: 100%;
+ font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.page-footer {	padding-top: 10px; }
+.page-footer .container { width: 85%; }
+nav, .page-footer { background-color:  #1b1c1d; }
+.ui-dialog-titlebar { background-color:  #26a69a; }
+.sidenav { z-index: 9999; }
+.ui-dialog { z-index: 9999; }
+nav, .nav-wrapper, li { height: 42px; line-height: 42px; }
+nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i { height: 42px; line-height: 42px; }
+
+.dropdown-content { min-width: 300px !important; }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <ul class="left">
+        <li><img src="../images/Geoglyph-logo-s-l.png" style="height:38px;"></li><!-- accept="application/geo+json  -->
+        <li>EmakiJSON<input type="file" id="gh_emakijsonfile" onchange="ghEmakiFileSelect( this );" accept=".json">
+	<li>
+          <div class="preloader-wrapper small" id="gh_loader" style="width:32px;height:32px;">
+            <div class="spinner-layer spinner-green-only">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+        </div></li>
+        <li><BR></li>
+        <li><a class="modal-trigger btn-small" href="#gh_emakifilemodal"><i class="small material-icons">save</i></a></li>
+	<!--
+	<li><a class="btn-small red darken-3" target="_blank" rel="noopener noreferrer" href="georoutefind.html"><i class="small material-icons right">open_in_new</i></a></li>
+	<li>
+	  <label>
+            <input type="checkbox" id="gh_synccheck" name="mapsync" />
+            <span>sync maps</span>
+	  </label>
+	</li>
+        <li><a class="btn-small red darken-3" href="javascript:ghSearchRoute();"><i class="small material-icons">sync</i></a>
+            
+        <li><a class="modal-trigger btn-small red darken-3" href="#gh_routeindexmodal"><i class="small material-icons">format_list_bulleted</i></a>
+        <li><a class="modal-trigger btn-small red darken-3" href="#gh_routenamemodal"><i class="small material-icons">playlist_add</i></a>            
+        -->
+            
+      </ul>
+
+      <ul class="right">
+        <li><a href="https://www.youtube.com/channel/UCPJB_FOkmHItkeFE3sO_blw" class="right"><i class="material-icons">videocam</i></a></li>
+        <li><a href="index.html" class="right"><i class="material-icons">home</i></a></li>
+        <li><a class="waves-effect waves-light modal-trigger" href="#gh_aboutmodal"><i class="material-icons">help_outline</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="emakimap" style="width:80%;height:90%;float:left"></div>
+  <!--  /////////////////////   -->
+  <div class="container" style="width:240px;height:90%;float:left;">
+    <div class="row">
+      <div class="col s12">
+	<!--  <h4 id="gh_marker_name"></h4> -->
+	<table style="border:0px;margin-left:10px;">
+	  <TR>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="yellow">
+		<span><i class="yellow">__</i>yellow</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="light-blue">
+		<span><i class="light-blue">__</i>light-blue</span>
+	      </label>
+	  </TR>
+	  <TR>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="light-green">
+		<span><i class="light-green">__</i>light-green</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="lime">
+		<span><i class="lime">__</i>lime</span>
+	      </label>
+	  </TR>
+	  <TR>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="amber">
+		<span><i class="amber">__</i>amber</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="orange">
+		<span><i class="orange">__</i>orange</span>
+	      </label>
+	  </TR>
+	  <TR>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="grey">
+		<span><i class="grey">__</i>grey</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label><input type="radio" name="gh_pointcolor" value="blue-grey">
+		<span><i class="blue-grey">__</i>blue-grey</span>
+	      </label>
+	  </TR>
+	</table>
+	key:<input type="text" size="8" id="gh_unit_key" value=""><BR>
+	name:<input type="text" size="8" id="gh_unit_name" value=""><BR>
+	description:<input type="text" size="8" id="gh_unit_description" value=""><BR>
+      </div>
+      <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+          <li class="tab col s3"><a class="active" href="#side_tab1"><i class="material-icons">person</i></a></li>
+          <li class="tab col s3"><a href="#side_tab2"><i class="material-icons">security</i></a></li>
+	  <li class="tab col s3"><a href="#side_tab3"><i class="material-icons">inventory</i></a></li>
+          <li class="tab col s3"><a href="#side_tab4"><i class="material-icons">scatter_plot</i></a></li>
+        </ul>
+      </div>
+      <div id="side_tab1" class="col s12">
+	leadership:
+	<p class="range-field">
+	  <input type="range" id="gh_unit_leadership" min="1" max="100"  step="1" value="70"/>
+	</p>
+	attack:
+	<p class="range-field">
+	  <input type="range" id="gh_unit_attack" min="1" max="100"  step="1" value="70"/>
+	</p>
+	defense:
+	<p class="range-field">
+	  <input type="range" id="gh_unit_defense" min="1" max="100"  step="1" value="70"/>
+	</p>
+	searching:
+	<p class="range-field">
+	  <input type="range" id="gh_unit_searching" min="1" max="100"  step="1" value="70"/>
+	</p>
+	luck:
+	<p class="range-field">
+	  <input type="range" id="gh_unit_luck" min="1" max="100"  step="1" value="70"/>
+	</p>
+	speed max:<input type="text" size="8" id="gh_unit_speed_max" value=""><BR>
+	speed normal:<input type="text" size="8" id="gh_unit_speed_normal" value=""><BR>
+      </div>
+      <div id="side_tab2" class="col s12">
+	Weapon:<input type="text" size="8" id="gh_unit_weapon" value=""><BR>
+	Formation:<input type="text" size="8" id="gh_unit_formation" value=""><BR>
+      </div>
+      <div id="side_tab3" class="col s12">
+	Ration:<input type="text" size="8" id="gh_unit_ration" value=""><BR>
+	Bullet:<input type="text" size="8" id="gh_unit_bullet" value=""><BR>
+      </div>
+      <div id="side_tab4" class="col s12">
+	Strength:<input type="text" size="8" id="gh_unit_strength" value=""><BR>
+	CircleColor: <input type="text" size="8" id="gh_unit_color" value=""><BR>
+	CircleFillColor:<input type="text" size="8" id="gh_unit_fillcolor" value=""><BR>
+      </div>
+    </div>
+  </div>
+		
+<!-- Emaki file Modal Structure -->
+<div id="gh_emakifilemodal" class="modal" style="height:300px;width:640px;">
+  <div class="modal-content">
+    <h4>Emaki Data</h4>
+    <BR><BR>
+    <input type="text" size="124" id="gh_emakifilename" value=""><BR>
+    <a href="javascript:ghEmakiDownloadJSON();"><i class="material-icons left">file_download</i>Save Download</a>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close yellow btn-flat">CLOSE<i class="material-icons right">close</i></a>
+  </div>
+</div>            
+<!-- Emaki file Modal Structure -->
+
+
+<!-- About Modal Structure -->
+<div id="gh_aboutmodal" class="modal" style="background:#424242;color:#b0bec5;">
+  <div class="modal-content">
+    <img src="../images/Geoglyph-logo-s-l.png">
+    <h4>Geoglyph Emaki Editor</h4>
+    <div id="gh_aboutcontent"></div>
+  </div>
+  <div class="modal-footer" style="background:#424242;color:#b0bec5;">
+    <i class="material-icons">copyright</i> 2022 Geoglyph Project.&nbsp;&nbsp;&nbsp;&nbsp;<a href="#!" class="modal-close yellow btn-flat"><i class="material-icons right">close</i>CLOSE</a>
+  </div>
+</div>        
+<!-- About Modal Structure -->        
+        
+<script src="../js/ghMapEditor.js"></script>
+</body>
+</html>

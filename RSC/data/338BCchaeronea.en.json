@@ -1,0 +1,413 @@
+{
+	"property": {
+		"revision": 5.1,
+		"author": "Kamonasu",
+		"mail": "info@geoglyph.info",
+		"datetime": "2022-05-27T06:00:01+09:00"
+	},
+	"scene": {
+		"name": "Battle of Chaeronea",
+		"description": "The Battle of Chaeronea was fought in 338 BC, near the city of Chaeronea in Boeotia, between an alliance of Greek city-states led by Macedonia under Philip II and an alliance of some of the other Greek city-states led by Athens and Thebes.",
+		"timestring": "2/Aug/338BC",
+		"starttime": "1338-08-02T06:00:01+02:00",
+		"latlng": [
+			38.503185,
+			22.855167
+		],
+		"zoom": 14
+	},
+	"configure": {
+		"weapon": "ancientathenaweapon.json",
+		"formation": "ancientathenaformation.json",
+		"item": null,
+		"skill": null,
+		"damagepernodes": 0.0054
+	},
+	"corps": {
+		"macedon": {
+			"name": "Macedon",
+			"description": "Macedon was an ancient kingdom on the periphery of Archaic and Classical Greece, and later the dominant state of Hellenistic Greece.",
+			"general": "philipII",
+			"color": "#478800"
+		},
+		"athens": {
+			"name": "Classical Athens",
+			"description": "The city of Athens during the classical period of ancient Greece (480–323 BC) was the major urban centre of the notable polis (city-state) of the same name, located in Attica, Greece.",
+			"general": "chares",
+			"color": "#D52B1E"
+		}
+	},
+	"units": {
+		"philipII": {
+			"name": "Philip II of Macedon",
+			"corps": "macedon",
+			"description": "He was the king (basileus) of the ancient kingdom of Macedonia from 359 BC until his death in 336 BC.",
+			"hostility": [
+				"athens"
+			],
+			"ability": {
+				"leadership": 99,
+				"attack": 89,
+				"defense": 99,
+				"searching": 100,
+				"luck": 77,
+				"speed": {
+					"max": 20,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"pikemen",
+				"hypaspist"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square"
+			],
+			"initialize": {
+				"latlng": [
+					38.50310921056822,
+					22.83671379089356
+				],
+				"command": [
+				    "wait","weapon hypaspist","speed 6",
+				    "formation line","route 38.49619 22.853343"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 100
+			},
+			"node": {
+				"strength": 700,
+				"distance": 3,
+				"marker": {
+					"image": "philipII-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"parmenion": {
+			"name": "Parmenion",
+			"corps": "macedon",
+			"description": "Parmenion son of Philotas was a Macedonian general in the service of Philip II of Macedon and Alexander the Great.",
+			"hostility": [
+				"athens"
+			],
+			"ability": {
+				"leadership": 86,
+				"attack": 83,
+				"defense": 91,
+				"searching": 100,
+				"luck": 89,
+				"speed": {
+					"max": 20,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"phalanx"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square"
+			],
+			"initialize": {
+				"latlng": [
+					38.509018609405864,
+					22.8416919708252
+				],
+				"command": [
+				    "wait","weapon phalanx","speed 2",
+				    "formation line","route 38.502404 22.857141"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 100
+			},
+			"node": {
+				"strength": 1000,
+				"distance": 2,
+				"marker": {
+					"image": "macedonia-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"alexander": {
+			"name": "Alexander III of Macedon",
+			"corps": "macedon",
+			"description": "He commonly known as Alexander the Great was a king of the ancient Greek kingdom of Macedon.",
+			"hostility": [
+				"athens"
+			],
+			"ability": {
+				"leadership": 100,
+				"attack": 100,
+				"defense": 100,
+				"searching": 100,
+				"luck": 100,
+				"speed": {
+					"max": 40,
+					"normal": 16
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square"
+			],
+			"initialize": {
+				"latlng": [
+					38.51499466728167,
+					22.845726013183597
+				],
+				"command": [
+					"wait","weapon cavalry","speed 2",
+					"formation line","route 38.513452 22.848644"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 100
+			},
+			"node": {
+				"strength": 200,
+				"distance": 5,
+				"marker": {
+					"image": "alexander-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"chares": {
+			"name": "Chares of Athens ",
+			"corps": "athens",
+			"description": "Chares of Athens was a 4th-century BC Athenian military commander (Strategos) who for a number of years was one of Athens's foremost commanders. ",
+			"hostility": [
+				"macedon"
+			],
+			"ability": {
+				"leadership": 82,
+				"attack": 61,
+				"defense": 62,
+				"searching": 76,
+				"luck": 62,
+				"speed": {
+					"max": 13,
+					"normal": 6
+				}
+			},
+			"weapon": [
+				"hoplites"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square"
+			],
+			"initialize": {
+				"latlng": [
+					38.50096021803898,
+					22.860746383666992
+				],
+				"command": [
+					"wait","weapon hoplites","speed 2",
+				    "formation line","route 38.502639 22.856369"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 100
+			},
+			"node": {
+				"strength": 700,
+				"distance": 3,
+				"marker": {
+					"image": "chares-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"lysicles": {
+			"name": "Lysicles",
+			"corps": "athens",
+			"description": "one of the commanders of the Athenian army at the battle of Chaeronea.",
+			"hostility": [
+				"macedon"
+			],
+			"ability": {
+				"leadership": 61,
+				"attack": 63,
+				"defense": 84,
+				"searching": 80,
+				"luck": 85,
+				"speed": {
+					"max": 13,
+					"normal": 6
+				}
+			},
+			"weapon": [
+				"hoplites"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square"
+			],
+			"initialize": {
+				"latlng": [
+					38.49498299541858,
+					22.856798171997074
+				],
+				"command": [
+					"wait","weapon hoplites","speed 2",
+				    "formation line","route 38.496291 22.853086"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 100
+			},
+			"node": {
+				"strength": 1000,
+				"distance": 3,
+				"marker": {
+					"image": "athens-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"theagenes": {
+			"name": "Theagenes",
+			"corps": "athens",
+			"description": "one of the commanders of the Athenian army at the battle of Chaeronea.",
+			"hostility": [
+				"macedon"
+			],
+			"ability": {
+				"leadership": 79,
+				"attack": 74,
+				"defense": 74,
+				"searching": 60,
+				"luck": 80,
+				"speed": {
+					"max": 13,
+					"normal": 6
+				}
+			},
+			"weapon": [
+				"hoplites"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square"
+			],
+			"initialize": {
+				"latlng": [
+					38.506332579138295,
+					22.863836288452152
+				],
+				"command": [
+					"wait","weapon hoplites","speed 2",
+					"formation line","route 38.506938 22.861862"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 100
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "athens-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		}
+	},
+	"map": {
+		"field": null,
+		"structure": null
+	}
+}

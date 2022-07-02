@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html data-attr-t lang-t="attribute.lang">
+    <head>
+        <!-- Site Properties -->
+        <title>Geoglyph Emaki 3D</title>
+        <meta charset="utf-8">
+        <!-- Include the CesiumJS JavaScript and CSS files -->
+	<link href="https://cdn.jsdelivr.net/npm/cesium@1.85.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet" crossorigin>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/cesium@1.85.0/Build/Cesium/Cesium.js" crossorigin></script>
+	
+        <style type="text/css">
+            html, body, #cesiumContainer {
+                width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+            }
+            #toolbar {
+                margin:5px;
+                padding:2px 5px;
+                top: 4px;
+                left: 7px;
+                color: #f5f5f5;
+                position:absolute;
+                background: rgba(42, 42, 42, 0.8);
+                border-radius: 4px;
+            }
+            #toolbar input {
+                vertical-align: middle;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+            #toolbar .header {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body style="background-color:#1B1C1D;overflow-y:hidden;">
+
+      <!-- Main Content -->
+      <div id="cesiumContainer"></div>
+
+      <div id="toolbar">
+        <input id="enablesunchkbox" type="checkbox" value="false">
+        Enable Sun<BR>
+        <input id="showbuildingschkbox" type="checkbox" value="false" >
+        OSM Buildings
+      </div>
+      <script>
+	var GH_LANG = 'en';
+      </script>
+      <script src="../js/turfEmakiLib.min.js"></script>
+
+      <script src="../js/ghEmakiStatus.js"></script>
+      <script src="../js/ghEmakiLang.js"></script>
+      <script src="../js/ghEmakiParams.js"></script>
+      <script src="../js/ghEmakiSharedArray.js"></script>
+      <script src="../js/ghEmakiUtil.js"></script>
+      <script src="../js/ghEmakiClock.js"></script>
+      <script src="../js/ghEmakiBroadcast.js"></script>
+      <script src="../js/ghEmakiTerrain.js"></script>  
+      <script src="../js/ghEmakiUnit3d.js"></script>
+      <script src="../js/ghEmakiManager3d.js"></script>
+      <script src="../js/ghEmakiMain3d.js"></script>
+      <!--
+      <script src="../js/ghEmaki3d.js"></script>
+      -->
+    </body>
+</html>

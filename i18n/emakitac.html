@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html data-attr-t lang-t="attribute.lang">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64986417-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+    dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-64986417-1');
+  </script>
+  <title>Geoglyph Emaki Tactics</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
+  <script src="../libs/leaflet.geometryutil.js"></script>
+  <!--  <script src="../libs/leaflet-heat.js"></script>   -->
+  <script src="../libs/TemperatureMapIdw.js"></script>
+  <script src="../libs/Leaflet.webGlTemperatureMap.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    nav,
+    .page-footer {
+      background-color: #2f4f4f;
+    }
+
+    .ui-dialog-titlebar {
+      background-color: #8fbc8f;
+    }
+
+    .sidenav {
+      z-index: 9999;
+    }
+
+    .ui-dialog {
+      z-index: 9999;
+    }
+
+    nav,
+    .nav-wrapper,
+    li {
+      height: 42px;
+      line-height: 42px;
+    }
+
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+      height: 42px;
+      line-height: 42px;
+    }
+
+    .dropdown-content {
+      min-width: 300px !important;
+    }
+
+    .leaflet-control-layers-toggle {
+      background-image: url(../images/layers.png);
+      width: 36px;
+      height: 36px;
+    }
+
+    .card.tiny {
+      height: 180px;
+      position: relative;
+    }
+    .page-footer {
+	padding-top : 0px;
+	color : initial;
+    }
+    .page-footer .footer-copyright {
+	padding : initial;
+	min-height : 15px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <ul class="left">
+        <li><img src="../images/Geoglyph-logo-s-l.png" style="height:38px;"></li>
+	<li>Tactics View</li>
+	<li>&nbsp;&nbsp;</li>
+	<li><input type="text" id="commandinput" name="commandinput" maxlength="200" value="" style="color:#CFD8DC;border: 2px solid #0a0;height:30px;"></li>
+	<li><a class="waves-light btn-small" onClick="ghOnClickCommandButton();" id="commandbtn"><i class="material-icons">keyboard_command_key</i></li>
+	<!-- <li><button type="button" id="commandbutton" value="commandbtn"><i class="material-icons">keyboard_command_key</i></button> -->
+      </ul>
+      <ul class="right">
+        <li><a href="index.html" class="right"><i class="material-icons">home</i></a></li>
+        <li><a class="waves-effect waves-light modal-trigger" href="#gh_aboutmodal"><i class="material-icons">help_outline</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Map -->
+  <div id="leafletmap" class="leafletmap" style="overflow:none"></div>
+  <!-- Main Map -->
+
+  <!-- Status Bar 
+  <div
+    style="left: 100px;width: 800px;height:36px;position:absolute;top:48px;z-index:1000;background-color: rgba(211,211,211,0.6);border-radius: 8px;">
+    <table style="width: 800px;height:36px;margin-top:-15px;">
+      <thead>
+        <tr>
+          <th style="width:340px;"><span id="battlename" style="font-size:20px;text-align:center;">A</span>
+          <th style="width:24px;"><i class="material-icons center" id="dateicon">date_range</i>
+          <th style="width:180px;"><span id="datecount" style="font-size:20px;">1834年12月13日</span>
+          <th style="width:100px;"><a id="playbtn" class="waves-effect waves-light btn" onClick="ghOnClickPlayPauseButton();">
+            <i id="playpauseicon" class="material-icons">play_arrow</i><span id="playbtntext">play</span></a>
+          <th style="width:24px;border-width:2px;"><i class="material-icons center" id="clockicon">access_time</i>
+          <th style="width:100px;"><span id="timecount" style="font-size:20px;">00:00:00</span>
+          <th style="width:24px;"><i class="material-icons center" id="wheathericon">wb_sunny</i>
+        </tr>
+    </table>
+  </div> -->
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <!--   <div id="marquee" style="color: rgba(255,255,255,0.8);padding-left: 6px;"> _____ </div> -->
+    <div class="row">
+      <div class="col l4 m6 s12">
+	<input type="text" id="commandoutput" name="commandoutput" maxlength="200" value="" style="color:#CFD8DC;border: 2px solid #0a0;height:30px;">
+      </div>
+      <div class="col l4 m6 s12">
+	Adsense
+      </div>
+      <div class="col l4 m6 s12">
+	Adsense
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <div class="container">
+        © 2022 Copyright Geoglyph Emaki
+        <a class="grey-text text-lighten-4 right" href="index.html"  data-t="emaki2d.home">HOME</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- About Modal Structure -->
+  <div id="gh_aboutmodal" class="modal" style="background:#424242;color:#b0bec5;">
+    <div class="modal-content">
+      <img src="../images/Geoglyph-logo-s-l.png">
+      <h4 data-t="index.messagetitle"></h4>
+      <div id="gh_aboutcontent">
+	<pre>https://earth.geoglyph.info</pre>
+      </div>
+      Scene Property<BR>
+      &nbsp;&nbsp;<span id="gh_preperty_author"></span><BR>
+      &nbsp;&nbsp;<span id="gh_preperty_mail"></span><BR>
+      &nbsp;&nbsp;<span id="gh_preperty_datetime"></span><BR>
+	  <!--  <li><div id="gh_preperty_revision"></div> -->
+      BGM ( Many thanks )<BR>
+      &nbsp;&nbsp;<A href="https://opengameart.org/content/airport-attack">Airport Attack</A><BR>
+      &nbsp;&nbsp;<A href="https://soundcloud.com/palrom">Deck Fight</A><BR>
+      &nbsp;&nbsp;<A href="https://opengameart.org/content/railgun-rain">Railgun Rain</A><BR>
+    </div>
+    <div class="modal-footer" style="background:#424242;color:#b0bec5;">
+      <i class="material-icons">copyright</i>2022 Geoglyph Project.&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#!" class="modal-close yellow btn-flat" data-t="modal.ok">OK</a>
+    </div>
+  </div>
+  <!-- About Modal Structure -->
+  <script>
+    var GH_LANG = 'en';
+  </script>
+  <script src="../js/turfEmakiLib.min.js"></script>
+
+  <script src="../js/ghEmakiStatus.js"></script>
+  <script src="../js/ghEmakiParams.js"></script>
+  <script src="../js/ghEmakiLang.js"></script>
+  <script src="../js/ghEmakiUtil.js"></script>
+  <script src="../js/ghEmakiClock.js"></script>
+  <script src="../js/ghEmakiBroadcast.js"></script>
+  <script src="../js/ghEmakiTerrain.js"></script> 
+  <script src="../js/ghEmakiTacUnit.js"></script>
+  <script src="../js/ghEmakiMainTac.js"></script>
+
+  <!--
+  <script src="../js/ghEmakiTac.js"></script>
+  -->
+</body>
+</html>

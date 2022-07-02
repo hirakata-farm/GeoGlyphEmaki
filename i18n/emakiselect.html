@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html data-attr-t lang-t="attribute.lang">
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64986417-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+	
+        gtag('config', 'UA-64986417-1');
+      </script>
+      <meta charset="UTF-8" />
+
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="description" data-attr-t content-t="attribute.desc" lang-t="attribute.lang">
+      <meta name="keywords" data-attr-t content-t="attribute.keywords" lang-t="attribute.lang"/>
+
+      <title>Geoglyph Emaki Select Map</title>
+
+      <!-- Jquery -->
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+      <!-- Materialize -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>
+      
+      <!-- Leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+      <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #selectmap {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+      </style>
+    </head>
+    <body>
+      <div id="selectmap"></div>
+      <div id="logo" style="top:10px;left:80px;position:fixed;z-index:999"><a href="index.html"><img src="../images/geoglyph-logo-72b.png"></a></div>
+      <script src="../js/ghEmakiUtil.js"></script>
+      <script src="../js/ghEmakiSelect.js"></script>
+    </body>
+</html>

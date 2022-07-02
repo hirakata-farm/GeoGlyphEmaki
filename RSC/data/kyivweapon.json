@@ -1,0 +1,102 @@
+{
+    "AK74M" : {
+	"index" : 0,
+	"key" : "AK74M",
+        "description" : {
+	    "en" : "AK-74",
+	    "ja" : "AK-74"
+	},
+	"type" : "gun" ,
+	"range" : 500 ,
+	"rapid" : 0.5,
+	"power" : 2,
+	"regist" : 1,
+	"comsumption" : 1,
+	"icon" : {
+	    "image" : "akrifle32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "T90" : {
+	"index" : 1,
+	"key" : "T90",
+        "description" : {
+	    "en" : "T-90",
+	    "ja" : "T-90"
+	},
+	"type" : "tank" ,
+	"range" : 800 ,
+	"rapid" : 3,
+	"power" : 10,
+	"regist" : 100,
+	"comsumption" : 20,
+	"icon" : {
+	    "image" : "tank32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "tankren3.mp3"
+    },
+    "AR10" : {
+	"index" : 2,
+	"key" : "AR10",
+        "description" : {
+	    "en" : "AR-10",
+	    "ja" : "AR-10"
+	},
+	"type" : "gun" ,
+	"range" : 600 ,
+	"rapid" : 0.5,
+	"power" : 2,
+	"regist" : 1,
+	"comsumption" : 1,
+	"icon" : {
+	    "image" : "akrifle32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "javelin" : {
+	"index" : 3,
+	"key" : "javelin",
+        "description" : {
+	    "en" : "Javelin",
+	    "ja" : "Javelin"
+	},
+	"type" : "missile" ,
+	"range" : 1000 ,
+	"rapid" : 5,
+	"power" : 20,
+	"regist" : 10,
+	"comsumption" : 3,
+	"icon" : {
+	    "image" : "javelin32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "tankren3.mp3"
+    },
+    "T64" : {
+	"index" : 4,
+	"key" : "T64",
+        "description" : {
+	    "en" : "T-64",
+	    "ja" : "T-64"
+	},
+	"type" : "tank" ,
+	"range" : 700 ,
+	"rapid" : 3,
+	"power" : 8,
+	"regist" : 70,
+	"comsumption" : 20,	
+	"icon" : {
+	    "image" : "tank32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "tankren3.mp3"	
+    }
+}

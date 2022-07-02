@@ -1,0 +1,3084 @@
+{
+	"property": {
+		"revision": 5.1,
+		"author": "Kamonasu",
+		"mail": "info@geoglyph.info",
+		"datetime": "2022-04-27T06:00:01+09:00"
+	},
+	"scene": {
+		"name": "Battle of Mollwitz",
+		"description": "The Battle of Mollwitz was fought by Prussia and Austria on 10 April 1741, during the First Silesian War.",
+		"timestring": "10/Apr/1741",
+		"starttime": "1741-04-10T13:00:01+02:00",
+		"latlng": [
+			50.839443,
+			17.411098
+		],
+		"zoom": 14
+	},
+	"configure": {
+		"weapon": "napoleon1800weapon.json",
+		"formation": "napoleon1800formation.json",
+		"item": null,
+		"skill": null,
+		"damagepernodes": 0.00007
+	},
+	"corps": {
+		"prussia": {
+			"name": "Kingdom of Prussia",
+			"description": "The Kingdom of Prussia was a German kingdom that constituted the state of Prussia between 1701 and 1918.",
+			"general": "frederick",
+			"color": "#478800"
+		},
+		"habsburg": {
+			"name": "Habsburg monarchy",
+			"description": "The Habsburg monarchy was the collection of lands and kingdoms of the Habsburg dynasty.",
+			"general": "neipperg",
+			"color": "#D52B1E"
+		}
+	},
+	"units": {
+		"frederick": {
+			"name": "Frederick II",
+			"corps": "prussia",
+			"description": "He was King in Prussia from 1740 until 1772, and King of Prussia from 1772 until his death.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 100,
+				"attack": 100,
+				"defense": 100,
+				"searching": 100,
+				"luck": 100,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.847383,
+					17.434015
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Friedrich2-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"schwerin": {
+			"name": "Kurt Christoph von Schwerin",
+			"corps": "prussia",
+			"description": "He was a Prussian Generalfeldmarschall, one of the leading commanders under Frederick the Great.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 86,
+				"attack": 81,
+				"defense": 84,
+				"searching": 80,
+				"luck": 81,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.828872662768624,
+					17.40869522094727
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.833535 17.400627","speed 1","attack unit carl"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"prfriedrich": {
+			"name": "Prinz Friedrich",
+			"corps": "prussia",
+			"description": "Prinz Friedrich",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 88,
+				"attack": 77,
+				"defense": 72,
+				"searching": 63,
+				"luck": 66,
+				"speed": {
+					"max": 60,
+					"normal": 20
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.827842283137976,
+					17.400283813476566
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Prussia-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"bayreuth": {
+			"name": "Bayreuth",
+			"corps": "prussia",
+			"description": "Bayreuth",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 71,
+				"attack": 61,
+				"defense": 80,
+				"searching": 83,
+				"luck": 61,
+				"speed": {
+					"max": 60,
+					"normal": 20
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.824806156632306,
+					17.40045547485352
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Prussia-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"kalckstein": {
+			"name": "Christoph Wilhelm von Kalckstein",
+			"corps": "prussia",
+			"description": "He was a Prussian field marshal on May 24, 1747.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 80,
+				"attack": 81,
+				"defense": 86,
+				"searching": 86,
+				"luck": 89,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.8363531899127,
+					17.417020797729496
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.839376 17.41009","speed 1","attack unit browne"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"puttkamer": {
+			"name": "puttkamar",
+			"corps": "prussia",
+			"description": "Puttkamer Grenadiers",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 63,
+				"attack": 70,
+				"defense": 85,
+				"searching": 70,
+				"luck": 73,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83158350742286,
+					17.41195678710938
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.834186 17.404146","speed 1","attack unit scmettau"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"buddenbrock": {
+			"name": "Buddenbrock",
+			"corps": "prussia",
+			"description": "Buddenbrock Grenadiers",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 76,
+				"attack": 67,
+				"defense": 90,
+				"searching": 73,
+				"luck": 83,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.833426561061884,
+					17.413759231567386
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.835297 17.406163","speed 1","attack unit baden"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"truchess": {
+			"name": "Truchess",
+			"corps": "prussia",
+			"description": "Truchess",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 80,
+				"attack": 84,
+				"defense": 73,
+				"searching": 69,
+				"luck": 86,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83483604431452,
+					17.415304183959964
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.837235 17.408352","speed 1","attack unit kolowrat"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"brandenburg": {
+			"name": "Brandenburg",
+			"corps": "prussia",
+			"description": "Brandenburg",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 76,
+				"attack": 86,
+				"defense": 81,
+				"searching": 85,
+				"luck": 70,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.8380880184653,
+					17.41968154907227
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.841164 17.412343","speed 1","attack unit botta"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"prleopold": {
+			"name": "Prinz Leopold",
+			"corps": "prussia",
+			"description": "Prinz Leopold",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 81,
+				"attack": 80,
+				"defense": 85,
+				"searching": 85,
+				"luck": 87,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83423956118362,
+					17.421312332153324
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"dessau": {
+			"name": "Anhalt Dessau",
+			"corps": "prussia",
+			"description": "Anhalt Dessau",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 60,
+				"attack": 85,
+				"defense": 87,
+				"searching": 81,
+				"luck": 83,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.840906134350995,
+					17.426462173461918
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"marwitz": {
+			"name": "Heinrich Karl von der Marwitz",
+			"corps": "prussia",
+			"description": "He was a Prussian infantry general and military governor of Breslau.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 74,
+				"attack": 74,
+				"defense": 62,
+				"searching": 89,
+				"luck": 73,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83971399898198,
+					17.422084808349613
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.842614 17.413759","speed 1","attack unit ogilvy"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"kleist": {
+			"name": "Kleist",
+			"corps": "prussia",
+			"description": "Kleist",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 85,
+				"attack": 64,
+				"defense": 68,
+				"searching": 81,
+				"luck": 84,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84171965389634,
+					17.42320060729981
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.843834 17.414918","speed 1","attack unit lothringen"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"winterfeldt": {
+			"name": "Winterfeldt",
+			"corps": "prussia",
+			"description": "Winterfeldt",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 64,
+				"attack": 61,
+				"defense": 88,
+				"searching": 89,
+				"luck": 86,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.844483937108436,
+					17.423458099365238
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"posadowsky": {
+			"name": "Karl Friedrich von Posadowsky",
+			"corps": "prussia",
+			"description": "He was a Prussian lieutenant general, head of the Dragoon Regiment No. 1 and the Knights' Academy in Liegnitz.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 83,
+				"attack": 89,
+				"defense": 87,
+				"searching": 77,
+				"luck": 67,
+				"speed": {
+					"max": 60,
+					"normal": 20
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.82648722008232,
+					17.40320205688477
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 5,
+				"marker": {
+					"image": "Prussia-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"bolstern": {
+			"name": "Bolstern",
+			"corps": "prussia",
+			"description": "Bolstern",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 60,
+				"attack": 69,
+				"defense": 64,
+				"searching": 85,
+				"luck": 70,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.85011952855786,
+					17.423543930053714
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"schulenburg": {
+			"name": "Adolph Friedrich von der Schulenburg",
+			"corps": "prussia",
+			"description": "He was a lieutenant general in the Prussian army and confidante of King Friedrich Wilhelm I of Prussia.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 89,
+				"attack": 67,
+				"defense": 67,
+				"searching": 86,
+				"luck": 83,
+				"speed": {
+					"max": 60,
+					"normal": 20
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84843998822809,
+					17.426719665527347
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Prussia-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"carabiniers": {
+			"name": "Leib Carabiniers",
+			"corps": "prussia",
+			"description": "Leib Caraniniers",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 84,
+				"attack": 87,
+				"defense": 82,
+				"searching": 83,
+				"luck": 78,
+				"speed": {
+					"max": 60,
+					"normal": 20
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84648902856609,
+					17.42337226867676
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 30,
+				"distance": 5,
+				"marker": {
+					"image": "Prussia-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"gendarmes": {
+			"name": "Gendarmes",
+			"corps": "prussia",
+			"description": "Gendarmes",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 62,
+				"attack": 68,
+				"defense": 72,
+				"searching": 87,
+				"luck": 72,
+				"speed": {
+					"max": 60,
+					"normal": 20
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84800592973101,
+					17.423286437988285
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 10,
+				"distance": 5,
+				"marker": {
+					"image": "Prussia-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"prmoritz": {
+			"name": "Prinz Moritz",
+			"corps": "prussia",
+			"description": "Prinz Moritz",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 78,
+				"attack": 66,
+				"defense": 71,
+				"searching": 78,
+				"luck": 65,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83884708230099,
+					17.42869377136231
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"saldern": {
+			"name": "Saldern",
+			"corps": "prussia",
+			"description": "Saldern",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 75,
+				"attack": 61,
+				"defense": 78,
+				"searching": 69,
+				"luck": 71,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83228828780089,
+					17.418737411499027
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"glasenapp": {
+			"name": "Glasenapp",
+			"corps": "prussia",
+			"description": "Glasenapp",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 79,
+				"attack": 63,
+				"defense": 67,
+				"searching": 61,
+				"luck": 83,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83526862323323,
+					17.424488067626957
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"leopold": {
+			"name": "Leopold II. Maximilian",
+			"corps": "prussia",
+			"description": "He was the reigning Prince of Anhalt-Dessau from the Ascanian family and at the same time a Prussian general.",
+			"hostility": [
+				"habsburg"
+			],
+			"ability": {
+				"leadership": 82,
+				"attack": 62,
+				"defense": 87,
+				"searching": 74,
+				"luck": 70,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83684118067962,
+					17.427062988281254
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Prussia-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#f44336",
+					"fillcolor": "#00bcd4",
+					"radius": 4
+				}
+			}
+		},
+		"neipperg": {
+			"name": "Wilhelm Reinhard von Neipperg",
+			"corps": "habsburg",
+			"description": "Count Wilhelm Reinhard von Neipperg was an Austrian general.",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 100,
+				"attack": 100,
+				"defense": 100,
+				"searching": 100,
+				"luck": 100,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84592064275452,
+					17.381143569946293
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 100,
+				"distance": 3,
+				"marker": {
+					"image": "Reinhard-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"romer": {
+			"name": "Karl Joachim von Römer",
+			"corps": "habsburg",
+			"description": "Karl Joachim von Römer",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 78,
+				"attack": 75,
+				"defense": 71,
+				"searching": 74,
+				"luck": 59,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.85315359422735,
+					17.401571273803714
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"althann": {
+			"name": "Althann",
+			"corps": "habsburg",
+			"description": "Althann",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 65,
+				"attack": 70,
+				"defense": 50,
+				"searching": 55,
+				"luck": 53,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.852774863382145,
+					17.40440368652344
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"seher": {
+			"name": "Seherr",
+			"corps": "habsburg",
+			"description": "Seherr",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 51,
+				"attack": 65,
+				"defense": 58,
+				"searching": 61,
+				"luck": 57,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.851095172266724,
+					17.402772903442386
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"hohenembs": {
+			"name": "Hohenembs",
+			"corps": "habsburg",
+			"description": "Hohenembs",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 63,
+				"attack": 66,
+				"defense": 63,
+				"searching": 69,
+				"luck": 60,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.849740325072744,
+					17.401056289672855
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"lanthieri": {
+			"name": "Lanthieri",
+			"corps": "habsburg",
+			"description": "Lanthieri",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 56,
+				"attack": 65,
+				"defense": 69,
+				"searching": 69,
+				"luck": 66,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.85207077316975,
+					17.39865303039551
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"birkenfeld": {
+			"name": "Birkenfeld",
+			"corps": "habsburg",
+			"description": "Birkenfeld",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 64,
+				"attack": 69,
+				"defense": 59,
+				"searching": 60,
+				"luck": 58,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.850661832867665,
+					17.396335601806644
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"carl": {
+			"name": "Carl von Lothringen",
+			"corps": "habsburg",
+			"description": "Carl von Lothringen",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 61,
+				"attack": 70,
+				"defense": 62,
+				"searching": 63,
+				"luck": 61,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83998550927241,
+					17.381572723388675
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon","route 50.835514 17.388611","speed 1","attack unit schwerin"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"lothringen": {
+			"name": "Lothringen",
+			"corps": "habsburg",
+			"description": "Loghringen",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 65,
+				"attack": 63,
+				"defense": 53,
+				"searching": 60,
+				"luck": 59,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.848223043487764,
+					17.39848136901856
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.84592 17.404189","speed 1","attack unit kleist"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 120,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"scmettau": {
+			"name": "Scmettau",
+			"corps": "habsburg",
+			"description": "Scmettau",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 53,
+				"attack": 65,
+				"defense": 57,
+				"searching": 69,
+				"luck": 67,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84123212862227,
+					17.383890151977543
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon","route 50.838007 17.391744","speed 1","attack unit puttkamer"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"botta": {
+			"name": "Botta dAorno",
+			"corps": "habsburg",
+			"description": "Botta dAorno",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 69,
+				"attack": 70,
+				"defense": 53,
+				"searching": 56,
+				"luck": 51,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84616402310364,
+					17.39418983459473
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.843806 17.399898","speed 1","attack unit brandenburg"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"browne": {
+			"name": "Browne",
+			"corps": "habsburg",
+			"description": "Browne",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 60,
+				"attack": 58,
+				"defense": 67,
+				"searching": 68,
+				"luck": 55,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84535105149614,
+					17.391872406005863
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.842492 17.397666","speed 1","attack unit kalckstein"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"kolowrat": {
+			"name": "Kolowrat",
+			"corps": "habsburg",
+			"description": "Kolowrat",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 68,
+				"attack": 59,
+				"defense": 50,
+				"searching": 67,
+				"luck": 64,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84372524500524,
+					17.388868331909183
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon","route 50.840446 17.395434","speed 1","attack unit truchess"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"baden": {
+			"name": "Baden-Baden",
+			"corps": "habsburg",
+			"description": "Baden-Baden",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 52,
+				"attack": 57,
+				"defense": 57,
+				"searching": 54,
+				"luck": 58,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84247866986015,
+					17.38646507263184
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon","route 50.838983 17.393374","speed 1","attack unit buddenbrock"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 120,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"ogilvy": {
+			"name": "Ogilvy",
+			"corps": "habsburg",
+			"description": "Ogilvy",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 68,
+				"attack": 53,
+				"defense": 55,
+				"searching": 51,
+				"luck": 60,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.847139559131875,
+					17.39667892456055
+				],
+				"command": [
+					"wait",
+				    "formation line","weapon cannon","route 50.844646 17.402558","speed 1","attack unit marwitz"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"daun": {
+			"name": "Daun",
+			"corps": "habsburg",
+			"description": "Daun",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 68,
+				"attack": 54,
+				"defense": 65,
+				"searching": 53,
+				"luck": 64,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.848277727784904,
+					17.390584945678714
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"thungen": {
+			"name": "Thungen",
+			"corps": "habsburg",
+			"description": "Thungen",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 57,
+				"attack": 63,
+				"defense": 67,
+				"searching": 64,
+				"luck": 64,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84713965993828,
+					17.387752532958988
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 120,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"grunne": {
+			"name": "Grunne",
+			"corps": "habsburg",
+			"description": "Grunne",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 58,
+				"attack": 67,
+				"defense": 56,
+				"searching": 55,
+				"luck": 52,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.84545966508386,
+					17.384576797485355
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 50,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"harrach": {
+			"name": "Harrach",
+			"corps": "habsburg",
+			"description": "Harrach",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 65,
+				"attack": 57,
+				"defense": 50,
+				"searching": 70,
+				"luck": 61,
+				"speed": {
+					"max": 30,
+					"normal": 8
+				}
+			},
+			"weapon": [
+				"bayonet",
+				"cannon"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.844050424277576,
+					17.381658554077152
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cannon"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 130,
+				"distance": 3,
+				"marker": {
+					"image": "Habsburg-musket-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"cordura": {
+			"name": "Cordura",
+			"corps": "habsburg",
+			"description": "Cordura",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 56,
+				"attack": 58,
+				"defense": 60,
+				"searching": 60,
+				"luck": 54,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.838684710073466,
+					17.37925529479981
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"liechtenstein": {
+			"name": "Liechtenstein",
+			"corps": "habsburg",
+			"description": "Liechtenstein",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 61,
+				"attack": 62,
+				"defense": 66,
+				"searching": 53,
+				"luck": 69,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83722131804516,
+					17.377624511718754
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"batthyani": {
+			"name": "Batthyani",
+			"corps": "habsburg",
+			"description": "Batthyani",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 66,
+				"attack": 60,
+				"defense": 57,
+				"searching": 67,
+				"luck": 67,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83564960246468,
+					17.37496376037598
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"hohenzollern": {
+			"name": "Hohenzollern",
+			"corps": "habsburg",
+			"description": "Hohenzollern",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 56,
+				"attack": 67,
+				"defense": 53,
+				"searching": 54,
+				"luck": 69,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.840581930167694,
+					17.377367019653324
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 70,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		},
+		"wurttemburg": {
+			"name": "Wurttemburg",
+			"corps": "habsburg",
+			"description": "Wurttemburg",
+			"hostility": [
+				"prussia"
+			],
+			"ability": {
+				"leadership": 59,
+				"attack": 56,
+				"defense": 54,
+				"searching": 52,
+				"luck": 67,
+				"speed": {
+					"max": 50,
+					"normal": 18
+				}
+			},
+			"weapon": [
+				"cavalry"
+			],
+			"formation": [
+				"column",
+				"line",
+				"square",
+				"invertedwedge",
+				"wedge"
+			],
+			"initialize": {
+				"latlng": [
+					50.83901023814988,
+					17.375049591064457
+				],
+				"command": [
+					"wait",
+					"formation line","weapon cavalry"
+				]
+			},
+			"stock": {
+				"ration": 100,
+				"bullet": 1000
+			},
+			"node": {
+				"strength": 60,
+				"distance": 5,
+				"marker": {
+					"image": "Habsburg-cavalry-32.png",
+					"width": 32,
+					"height": 32
+				},
+				"model": {
+					"uri": null,
+					"scale": 1.2,
+					"rotx": 90,
+					"roty": 0
+				},
+				"circle": {
+					"color": "#ffeb3b",
+					"fillcolor": "#2196f3",
+					"radius": 4
+				}
+			}
+		}
+	},
+	"map": {
+	    "field": null,
+	    "structure": {
+		"PrussianBaseCamp" : {
+		    "name" : "Prussian Base Camp",
+		    "owner" : "prussia",
+		    "description" : "Prussin Headquarters",
+		    "endurance" : 20,
+		    "latlng" : [ 50.847519, 17.432921 ],
+		    "stock" : {
+			"ration" :  100,
+			"bullet" : 7000
+		    },
+		    "marker" : {
+			"uri" : "Camp_32.png" ,
+			"width" : 32,
+			"height" : 32
+		    },
+		    "model":{
+			"uri":"Quarter1.glb",
+			"scale":3.0,
+			"rotx":0,
+			"roty":0
+		    },
+		    "geometry": 100
+		},
+		"HabsburgBaseCamp" : {
+		    "name" : "Habsburg Base Camp",
+		    "owner" : "habsburg",
+		    "description" : "Habsburg Headquarters",
+		    "endurance" : 20,
+		    "latlng" : [ 50.845554, 17.381444 ],
+		    "stock" : {
+			"ration" :  100,
+			"bullet" : 5000
+		    },
+		    "marker" : {
+			"uri" : "Camp_32.png" ,
+			"width" : 32,
+			"height" : 32
+		    },
+		    "model":{
+			"uri":"Quarter1.glb",
+			"scale":3.0,
+			"rotx":0,
+			"roty":0
+		    },
+		    "geometry": 100
+		}
+	    }
+	}
+}

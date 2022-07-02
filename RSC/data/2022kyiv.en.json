@@ -1,0 +1,1336 @@
+{
+    "property" : {
+	"revision": 5.3,
+        "author" : "Kamonasu",
+	"mail" : "info@geoglyph.info",
+	"datetime" : "2022-04-10T06:00:01+09:00"
+    },
+    "scene" : {
+        "name" : "Kyiv surrounded by Russians",
+	"description" : "Russia-Ukraine War",
+	"timestring" : "01/04/2022",
+	"starttime" : "2022-04-01T06:00:01+02:00",
+	"latlng" : [ 50.444114, 30.529118 ],
+	"zoom" : 13
+    },
+    "configure" : {
+	"weapon" : "kyivweapon.json",
+	"formation" : "kyivformation.json",
+	"item" : null,
+	"skill" : null,
+	"damagepernodes" : 0.0006
+    },
+    "corps" : {
+      	"russia" : {
+	    "name" : "Russia",
+	    "description" : "Russian troops" ,
+	    "general" : "vladimirputin",
+	    "color" : "#D52B1E"
+	},
+      	"ukraine" : {
+	    "name" : "Ukraine",
+	    "description" : "Ukraine troops" ,
+	    "general" : "zelenskyy",
+	    "color" : "#005BBB"
+	}
+    },
+    "units" : {
+	"vladimirputin" : {
+	    "name" : "Vladimir Putin" ,
+	    "corps" : "russia" ,
+	    "description" : "President Russia" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 100,
+		"attack" : 100,
+		"defense" : 100,
+		"searching" : 100,
+		"luck" : 100,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.451848, 30.457149],
+		"command" : ["wait","formation column","weapon T90", "route 50.446902 30.456419 50.445932 30.456827 50.442816 30.458865 50.441723 30.465775 50.442556 30.471697","attack unit UkraineDivision1"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 24,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "vladimirPutin32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision1" : {
+	    "name" : "1st Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "1st Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 41,
+		"attack" : 38,
+		"defense" : 20,
+		"searching" : 10,
+		"luck" : 40,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.450919, 30.461998],
+		"command" : ["wait","formation column","weapon T90","route 50.451534 30.464187 50.448979 30.48058 50.447366 30.481997 50.442761 30.480301","attack unit UkraineDivision1"]
+	    },
+	    "stock" : {
+		"ration" :  100,
+		"bullet" :  800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision2" : {
+	    "name" : "2nd Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "2nd Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 24,
+		"attack" : 27,
+		"defense" : 35,
+		"searching" : 10,
+		"luck" : 37,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.451213, 30.460528],
+		"command" : ["wait","formation column","weapon T90","route 50.451575 30.463114 50.451452 30.464573 50.448528 30.482383 50.445809 30.481288 50.445904 30.477533","attack unit UkraineDivision1"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision3" : {
+	    "name" : "3rd Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "3rd Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 36,
+		"attack" : 22,
+		"defense" : 12,
+		"searching" : 10,
+		"luck" : 29,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.451465, 30.458297],
+		"command" : ["wait","formation column","weapon T90","route 50.451957 30.461698 50.452012 30.461011 50.448487 30.483069 50.442311 30.520406 50.447776 30.522165 50.449717 30.523624 50.450338 30.524644 50.449436 30.527176 50.449095 30.527701 50.44822 30.52852750.447831 30.529139","attack unit zelenskyy" ]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision4" : {
+	    "name" : "4th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "4th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 17,
+		"attack" : 26,
+		"defense" : 32,
+		"searching" : 10,
+		"luck" : 47,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.454943, 30.46526],
+		"command" : ["wait","formation column","weapon T90","route 50.456247 30.473285 50.456029 30.474186 50.454253 30.4847 50.453925 30.486116 50.451944 30.486932 50.450659 30.48764 50.447817 30.491073 50.447161 30.492189 50.446929 30.493991 50.44861 30.498133 50.446082 30.513389 50.444804 30.521114 50.44298 30.520545 50.442638 30.522197 50.442488 30.522841 50.44257 30.523721","attack unit zelenskyy"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision5" : {
+	    "name" : "5th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "5th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 33,
+		"attack" : 23,
+		"defense" : 39,
+		"searching" : 10,
+		"luck" : 33,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.455516, 30.463693],
+		"command" : ["wait","formation column","weapon T90","route 50.456247 30.473285 50.456029 30.474014 50.454335 30.484872 50.453993 30.485902 50.451957 30.48691 50.453269 30.493391 50.4504 30.496502 50.448637 30.498154 50.449922 30.50221 50.449273 30.503572 50.449443 30.506437 50.449013 30.509559 50.450734 30.510331 50.449382 30.512123 50.449081 30.512863","attack unit UkraineDivision3"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision6" : {
+	    "name" : "6th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "6th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 42,
+		"attack" : 37,
+		"defense" : 37,
+		"searching" : 10,
+		"luck" : 48,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.481855, 30.476868],
+		"command" : ["wait","formation column","weapon T90","route 50.479439 30.480537 50.477008 30.486288 50.474086 30.49367 50.472488 30.497725 50.470521 30.501566 50.469046 30.504441 50.468213 30.506265 50.467503 30.505192 50.466178 30.507274 50.465222 30.50869 50.464225 30.508304 50.463514 30.508368 50.462511 30.506866 50.461575 30.506512 50.460933 30.507113 50.459594 30.508733 50.458549 30.508829 50.457511 30.507928 50.456862 30.50914 50.455735 30.509677 50.45555 30.509377 50.455503 30.508786 50.455134 30.508765 50.455229 30.511597 50.454874 30.511791","attack unit UkraineDivision3"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,		
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision7" : {
+	    "name" : "7th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "7th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 29,
+		"attack" : 31,
+		"defense" : 26,
+		"searching" : 10,
+		"luck" : 34,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.482552, 30.479679],
+		"command" : ["wait","formation column","weapon T90","route 50.481992 30.487983 50.476981 30.495536 50.470207 30.506587 50.466397 30.51281 50.464484 30.515814 50.464034 30.516565 50.462927 30.517445 50.462552 30.517938 50.4629 30.519 50.459355 30.524451 50.458952 30.524858 50.456582 30.523056 50.456315 30.522144 50.455776 30.521049 50.454717 30.519998 50.453836 30.517734","attack unit UkraineDivision3"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision8" : {
+	    "name" : "8th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "8th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 18,
+		"attack" : 38,
+		"defense" : 29,
+		"searching" : 10,
+		"luck" : 11,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.480982, 30.473843],
+		"command" : ["wait","formation column","weapon T90","route 50.478196 30.477276 50.476175 30.475645 50.475123 30.475645 50.473894 30.476267 50.47343 30.476739 50.470426 30.473371 50.468432 30.473328 50.467038 30.474272 50.466096 30.475044 50.463474 30.480902 50.462736 30.482233 50.460168 30.484979 50.457887 30.487297 50.457265 30.488015 50.456193 30.490386 50.456158 30.492243 50.456493 30.501813 50.455598 30.505171 50.455243 30.506512 50.455147 30.508282 50.45525 30.511587 50.454908 30.511812","attack unit UkraineDivision3"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,		
+		"distance" : 12.0,		
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision9" : {
+	    "name" : "9th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "9th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 34,
+		"attack" : 13,
+		"defense" : 15,
+		"searching" : 10,
+		"luck" : 60,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.455701, 30.608683],
+		"command" : ["wait","formation column","weapon T90","route 50.454662 30.607266 50.449033 30.586882 50.447039 30.580144 50.444688 30.580101 50.44354 30.575638 50.443841 30.5689 50.44119 30.559201 50.444716 30.552077 50.448624 30.546327 50.450919 30.540061","attack unit UkraineDivision4"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision10" : {
+	    "name" : "10th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "10th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 24,
+		"attack" : 35,
+		"defense" : 13,
+		"searching" : 10,
+		"luck" : 57,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.458542, 30.606301],
+		"command" : ["wait","formation column","weapon T90","route 50.45469 30.60791 50.449061 30.587225 50.44723 30.580702 50.447858 30.575638 50.446984 30.572805 50.443978 30.568643 50.441217 30.559416 50.445836 30.549588 50.447312 30.543494 50.445836 30.541692","attack unit UkraineDivision4"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+	"RussianDivision11" : {
+	    "name" : "11th Russian Division" ,
+	    "corps" : "russia" ,
+	    "description" : "11th Russian Division" ,
+	    "hostility" : ["ukraine"],
+	    "ability" : {
+		"leadership" : 26,
+		"attack" : 27,
+		"defense" : 18,
+		"searching" : 10,
+		"luck" : 75,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T90","AK74M" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.456527, 30.606987],
+		"command" : ["wait","formation column","weapon T90","route 50.456575 30.608168 50.454772 30.607481 50.449033 30.586967 50.446793 30.578899 50.44488 30.580144 50.443431 30.575595 50.44406 30.569286 50.441272 30.559158 50.444442 30.554953 50.446547 30.547485","attack unit UkraineDivision4"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Russia-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#f44336",
+		    "fillcolor" : "#00bcd4",
+		    "radius" : 4
+		}
+	    }
+	},
+
+
+	"zelenskyy" : {
+	    "name" : "Zelenskyy" ,
+	    "corps" : "ukraine" ,
+	    "description" : "President Ukraine" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 100,
+		"attack" : 100,
+		"defense" : 100,
+		"searching" : 100,
+		"luck" : 100,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T64","javelin","AR10" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.444787, 30.528291],
+		"command" : ["wait","formation line","weapon javelin","attack unit RussianDivision4"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 12,		
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Zelenskyy32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"UkraineDivision1" : {
+	    "name" : "1st Ukrainian Division" ,
+	    "corps" : "ukraine" ,
+	    "description" : "1st Ukrainian Division" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 87,
+		"attack" : 81,
+		"defense" : 88,
+		"searching" : 50,
+		"luck" : 29,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T64","javelin","AR10" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.442884, 30.47792],
+		"command" : ["wait","formation line","weapon javelin","attack unit vladimirputin"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 7,
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Ukraine-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"UkraineDivision2" : {
+	    "name" : "2nd Ukrainian Division" ,
+	    "corps" : "ukraine" ,
+	    "description" : "2nd Ukrainian Division" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 81,
+		"attack" : 82,
+		"defense" : 89,
+		"searching" : 50,
+		"luck" : 26,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T64","javelin","AR10" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.434008, 30.52783],
+		"command" : ["wait","formation line","weapon javelin","route 50.433413 30.529831 50.433393 30.530947 50.433615 30.531456 50.435928 30.528705 50.437046 30.527315 50.440223 30.522825 50.440787 30.522187","attack unit RussianDivision4" ]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 7,
+		"distance" : 12.0,		
+		"marker" : {
+		    "image" : "Ukraine-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"UkraineDivision3" : {
+	    "name" : "3rd Ukrainian Division" ,
+	    "corps" : "ukraine" ,
+	    "description" : "3rd Ukrainian Division" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 82,
+		"attack" : 85,
+		"defense" : 86,
+		"searching" : 50,
+		"luck" : 31,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T64","javelin","AR10" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.452101, 30.51385],
+		"command" : ["wait","formation line","weapon javelin","attack unit RussianDivision5"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 7,		
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Ukraine-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	},
+	"UkraineDivision4" : {
+	    "name" : "4th Ukrainian Division" ,
+	    "corps" : "ukraine" ,
+	    "description" : "4th Ukrainian Division" ,
+	    "hostility" : ["russia"],
+	    "ability" : {
+		"leadership" : 85,
+		"attack" : 83,
+		"defense" : 80,
+		"searching" : 50,
+		"luck" : 23,
+		"speed" : {
+		    "max" : 60.0,
+		    "normal" : 30.0
+		}
+	    },
+	    "weapon" : [ "T64","javelin","AR10" ],
+	    "formation" : [ "column","line","square" ],
+	    "initialize" : {
+		"latlng" :  [50.448542, 30.536993],
+		"command" : ["wait","formation line","weapon javelin","attack unit RussianDivision9"]
+	    },
+	    "stock" : {
+		"ration" : 100,
+		"bullet" : 800
+	    },
+	    "node" : {
+		"strength" : 7,		
+		"distance" : 12.0,
+		"marker" : {
+		    "image" : "Ukraine-32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri": "t90tank.glb",
+		    "scale":6.2,
+		    "rotx":90,
+		    "roty":0
+		},
+		"circle" : {
+		    "color" : "#ffeb3b",
+		    "fillcolor" : "#2196f3",
+		    "radius" : 4
+		}
+	    }
+	}
+    },
+    "map" : {
+	"field" : {
+	    "river" : {
+		"style" : {
+		    "color" : "#80D8FF",
+		    "weight" : 1,
+		    "fill" : true,
+		    "fillColor" : "#80D8FF",
+		    "fillOpacity" : 0.5
+		},
+		"keepout" : true,
+		"speedratio"  : 0,
+		"attackratio" : 0,
+		"defenseratio" : 0,
+		"fatigueratio" : 0,
+		"geometry" : "kyiv-water-3.geojson"
+	    },
+	    "buildings" : {
+		"style" : {
+		    "color" : "#212121",
+		    "weight" : 5,
+		    "fill" : true,
+		    "fillColor" : "#212121",
+		    "fillOpacity" : 0.5
+		},
+		"keepout" : true,
+		"speedratio"  : 0,
+		"attackratio" : 0,
+		"defenseratio" : 0,
+		"fatigueratio" : 0,
+		"geometry" : "kyiv-building-1.geojson"
+	    }
+	},
+	"structure" : {
+	    "UkrainePresidentOffice" : {
+		"name" : "Gorodetsky House",
+		"description" : "Office of the President of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 500,
+		"latlng" : [50.444183, 30.529504],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Government_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Bank1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 300
+	    },
+	    "UkraineGovernmentHouse" : {
+		"name" : "Government House",
+		"description" : "Government House of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.447845, 30.533634],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "KyivCityCouncil" : {
+		"name" : "Kyiv City Council",
+		"description" : "Kyiv City Council",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.446342, 30.520234],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "SecurityUkraine" : {
+		"name" : "Security Service of Ukraine",
+		"description" : "Security Service of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.450666, 30.515932],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "ForeignAffairs" : {
+		"name" : "Ministry of Foreign Affairs of Ukraine",
+		"description" : "Ministry of Foreign Affairs of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.457019, 30.521564],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "TechnicalInventory" : {
+		"name" : "Kyiv City Bureau of Technical Inventory",
+		"description" : "Kyiv City Bureau of Technical Inventory",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.455031, 30.5243],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "MariinskyPalace" : {
+		"name" : "Mariinsky Palace",
+		"description" : "Mariinsky Palace",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.448337, 30.537508],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 300
+	    },
+	    "MinistryInfrastructure" : {
+		"name" : "Ministry Infrastructure of Ukraine",
+		"description" : "Ministry Infrastructure of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.44958, 30.48131],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "MinistryInternal" : {
+		"name" : "Ministry of Internal Affairs of Ukraine",
+		"description" : "Ministry of Internal Affairs of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.440534, 30.534369],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "MinistryJustice" : {
+		"name" : "Ministry of Justice of Ukraine",
+		"description" : "Ministry of Justice of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 300,
+		"latlng" : [50.447831, 30.526569],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "MinistryDefense" : {
+		"name" : "Ministry of Defense of Ukraine",
+		"description" : "Ministry of Defense of Ukraine",
+		"owner" : "ukraine",
+		"endurance" : 500,
+		"latlng" : [50.443089, 30.478628],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 300
+	    },
+	    "KievFortress" : {
+		"name" : "Kyiv Fortress",
+		"description" : "Kyiv Fortress",
+		"owner" : "ukraine",
+		"endurance" : 200,
+		"latlng" : [50.43407, 30.528002],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "Court_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Flat1.glb",
+		    "scale":10.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 200
+	    },
+	    "SophiaCathedral" : {
+		"name" : "Sophia Cathedral",
+		"description" : "Sophia Cathedral",
+		"owner" : "ukraine",
+		"endurance" : 100,
+		"latlng" : [50.452893, 30.514312],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "church_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Church1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "VladimirCathedral" : {
+		"name" : "Vladimir Cathedral",
+		"description" : "Vladimir Cathedral",
+		"owner" : "ukraine",
+		"endurance" : 100,
+		"latlng" : [50.444921, 30.508797],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "church_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Church1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "KyivLavra" : {
+		"name" : "Kyivo-Pecherska Lavra",
+		"description" : "Kyivo-Pecherska Lavra",
+		"owner" : "ukraine",
+		"endurance" : 100,
+		"latlng" : [50.435146, 30.557399],
+		"stock" : {
+		    "ration" :  1000,
+		    "bullet" : 10000
+		},
+		"marker" : {
+		    "uri" : "church_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Church1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "RussianBaseCamp" : {
+		"name" : "Russian Base Camp",
+		"owner" : "russia",
+		"description" : "Russin Headquarters",
+		"endurance" : 20,
+		"latlng" : [ 50.451985, 30.455904 ],
+		"stock" : {
+		    "ration" :  100,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "Camp_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "RussianCamp1" : {
+		"name" : "Russian Camp 1",
+		"owner" : "russia",
+		"description" : "Russin Camp 1",
+		"endurance" : 20,
+		"latlng" : [ 50.450564, 30.463457 ],
+		"stock" : {
+		    "ration" :  200,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "Camp_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "RussianCamp2" : {
+		"name" : "Russian Camp 2",
+		"owner" : "russia",
+		"description" : "Russin Camp 2",
+		"endurance" : 20,
+		"latlng" : [ 50.454963, 30.463371 ],
+		"stock" : {
+		    "ration" :  200,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "Camp_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "RussianCamp3" : {
+		"name" : "Russian Camp 3",
+		"owner" : "russia",
+		"description" : "Russin Camp 3",
+		"endurance" : 20,
+		"latlng" : [ 50.482961, 30.475044 ],
+		"stock" : {
+		    "ration" :  200,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "Camp_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    },
+	    "RussianCamp4" : {
+		"name" : "Russian Camp 4",
+		"owner" : "russia",
+		"description" : "Russin Camp 4",
+		"endurance" : 20,
+		"latlng" : [ 50.45749, 30.607395 ],
+		"stock" : {
+		    "ration" :  200,
+		    "bullet" : 1000
+		},
+		"marker" : {
+		    "uri" : "Camp_32.png" ,
+		    "width" : 32,
+		    "height" : 32
+		},
+		"model":{
+		    "uri":"Quarter1.glb",
+		    "scale":3.0,
+		    "rotx":0,
+		    "roty":0
+		},
+		"geometry": 100
+	    }
+	}
+    }
+}

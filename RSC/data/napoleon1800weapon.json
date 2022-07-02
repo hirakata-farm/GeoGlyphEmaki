@@ -1,0 +1,82 @@
+{
+    "bayonet" : {
+	"index" : 0,
+	"key" : "bayonet",
+        "description" : {
+	    "en" : "Bayonet",
+	    "ja" : "銃剣"
+	},
+	"type" : "gun" ,
+	"range" : 100 ,
+	"rapid" : 0.4,
+	"power" : 4,
+	"regist" : 6,
+	"comsumption" : 1,
+	"icon" : {
+	    "image" : "bayonet32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "musket" : {
+	"index" : 1,
+	"key" : "musket",
+        "description" : {
+	    "en" : "Musket",
+	    "ja" : "マスケット銃"
+	},
+	"type" : "gun" ,
+	"range" : 100 ,
+	"rapid" : 0.5,
+	"power" : 2,
+	"regist" : 2,
+	"comsumption" : 1,
+	"icon" : {
+	    "image" : "musket32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "cavalry" : {
+	"index" : 2,
+	"key" : "cavalry",
+        "description" : {
+	    "en" : "Cavalry",
+	    "ja" : "騎兵"
+	},
+	"type" : "cavalry" ,
+	"range" : 20 ,
+	"rapid" : 0.7,
+	"power" : 20,
+	"regist" : 20,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "cavalry32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "cannon" : {
+	"index" : 3,
+	"key" : "cannon",
+        "description" : {
+	    "en" : "Cannon",
+	    "ja" : "大砲"
+	},
+	"type" : "cannon" ,
+	"range" : 1000,
+	"rapid" : 2,
+	"power" : 100,
+	"regist" : 1,
+	"comsumption" : 10,
+	"icon" : {
+	    "image" : "cannon32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "tankren3.mp3"
+    }
+}

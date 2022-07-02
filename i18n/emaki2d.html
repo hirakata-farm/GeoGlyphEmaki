@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html data-attr-t lang-t="attribute.lang">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64986417-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+    dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-64986417-1');
+  </script>
+  <title>Geoglyph Emaki 2D</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../libs/leaflet-measure-path.css">
+  <link rel="stylesheet" href="../libs/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="../libs/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin="anonymous"></script>
+  <script src="../libs/leaflet.geometryutil.js"></script>
+  <script src="../libs/leaflet-measure-path.js"></script>
+  <script src="../libs/leaflet-arrowheads.js"></script>
+  <script src="../libs/leaflet.plotter.js"></script>  
+  <script src="../libs/leaflet.sector.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js" crossorigin="anonymous"></script>
+  <script src="../libs/leaflet.control.select.js"></script>
+
+  <script src="../libs/jspreadsheet/jspreadsheet.js"></script>
+  <script src="../libs/jspreadsheet/jsuites.js"></script>
+  <link rel="stylesheet" href="../libs/jspreadsheet/jspreadsheet.css">
+  <link rel="stylesheet" href="../libs/jspreadsheet/jsuites.css">
+  <link rel="stylesheet" href="../libs/leaflet.control.select.css">
+  
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+
+    nav,
+    .page-footer {
+      background-color: #2f4f4f;
+    }
+
+    .ui-dialog-titlebar {
+      background-color: #8fbc8f;
+    }
+
+    .sidenav {
+      z-index: 9999;
+    }
+
+    .ui-dialog {
+      z-index: 9999;
+    }
+
+    nav,
+    .nav-wrapper,
+    li {
+      height: 42px;
+      line-height: 42px;
+    }
+
+    nav,
+    nav .nav-wrapper i,
+    nav a.sidenav-trigger,
+    nav a.sidenav-trigger i {
+      height: 42px;
+      line-height: 42px;
+    }
+
+    .dropdown-content {
+      min-width: 300px !important;
+    }
+
+    .leaflet-control-layers-toggle {
+      background-image: url(../images/layers.png);
+      width: 36px;
+      height: 36px;
+    }
+
+    .card.tiny {
+      height: 180px;
+      position: relative;
+    }
+    .page-footer {
+	padding-top : 0px;
+	color : initial;
+    }
+    .page-footer .footer-copyright {
+	padding : initial;
+	min-height : 15px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <ul class="left">
+        <li><img src="../images/Geoglyph-logo-s-l.png" style="height:38px;"></li>
+	<li><a class="waves-effect waves-light modal-trigger" href="#modal01" id="navigatorstart"><i class="material-icons left">power_settings_new</i><span data-t="emaki2d.start"></span></a></li>
+	<!--   <li><a class="waves-effect waves-light" href="emakiselect.html" id="navigatorstart"><i class="material-icons left">power_settings_new</i><span data-t="emaki2d.start"></span></a></li> -->
+	<li><a href="javascript:ghOpenUnitSheetDialog();"><i class="material-icons left">supervisor_account</i><span data-t="emaki2d.units"></span></a></li>
+	<li><a href="javascript:ghOpenWeaponSheetDialog();"><i class="material-icons left">security</i><span data-t="emaki2d.weapons"></span></a></li>
+	<li><a href="javascript:ghOpenFormationSheetDialog();"><i class="material-icons left">view_comfy</i><span data-t="emaki2d.formation"></span></a></li>
+	<li><a href="javascript:ghOpenReportDialog();"><i class="material-icons left">message</i><span data-t="emaki2d.report"></span></a></li>
+        <li><a id="launch3dviewbtn" target="_blank" rel="noopener" href="emaki3d.html"><i class="material-icons left">3d_rotation</i><span data-t="emaki2d.3dview"></span></a></li>
+	<li><a id="launch4dviewbtn" target="_blank" rel="noopener" href="emakitac.html"><i class="material-icons left">model_training</i><span data-t="emaki2d.tacview"></span></a></li>
+      </ul>
+
+      <ul class="right">
+        <li><a href="index.html" class="right"><i class="material-icons">home</i></a></li>
+        <li><a class="waves-effect waves-light modal-trigger" href="#gh_aboutmodal"><i class="material-icons">help_outline</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Map -->
+  <div id="leafletmap" class="leafletmap" style="overflow:none"></div>
+  <!-- Main Map -->
+
+
+  <!-- Status Bar -->
+  <div
+    style="left: 100px;width: 800px;height:36px;position:absolute;top:48px;z-index:1000;background-color: rgba(211,211,211,0.6);border-radius: 8px;">
+    <table style="width: 800px;height:36px;margin-top:-15px;">
+      <thead>
+        <tr>
+          <!--  <th style="width:340px;"><span id="battlename" style="font-size:20px;text-align:center;">AAAAAAAAAAAAAAAAAAAAA</span> -->
+          <th style="width:340px;"><span id="battlename" style="font-size:20px;text-align:center;">A</span>
+          <th style="width:24px;"><i class="material-icons center" id="dateicon">date_range</i>
+          <th style="width:180px;"><span id="datecount" style="font-size:20px;">1834年12月13日</span>
+          <th style="width:100px;"><a id="playbtn" class="waves-effect waves-light btn" onClick="ghOnClickPlayPauseButton();">
+            <i id="playpauseicon" class="material-icons">play_arrow</i><span id="playbtntext">play</span></a>
+          <th style="width:24px;border-width:2px;"><i class="material-icons center" id="clockicon">access_time</i>
+          <th style="width:100px;"><span id="timecount" style="font-size:20px;">00:00:00</span>
+          <th style="width:24px;"><i class="material-icons center" id="wheathericon">wb_sunny</i>
+        </tr>
+    </table>
+  </div>
+
+  <!-- Left Side Nav -->
+  <div id="slide-out" class="sidenav">
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs tabs-fixed-width">
+          <!--  <li class="tab col s6"><a class="active" href="#tabevent"><i class="material-icons left">message</i>Message</a></li> -->
+          <li class="tab col s6"><a href="#tabsetting"><i class="material-icons left">settings</i><span data-t="emaki2d.settings"></span></a></li>
+	  <li class="tab col s6"><a href="#tabsound"><i class="material-icons left">audiotrack</i><span data-t="emaki2d.sound"></span></a></li>
+        </ul>
+      </div>
+      <div id="tabsetting" class="col s12">
+        <BR> <BR>
+	<i class="material-icons left">speed</i><span data-t="emaki2d.gamespeed"></span><BR>
+	x 1 -> x 3 <BR>
+        <p class="range-field">
+          <input type="range" name="simulationspeed" id="simulationspeed" min="1" max="3" step="0.5" value="1"/>
+        </p>
+        <BR>
+	<i class="material-icons left">linear_scale</i><span>Sync ratio</span><BR>
+	Broadcast transfer rate<BR>
+        <p class="range-field">
+          <input type="range" name="broadcastrate" id="broadcastrate" min="1" max="10" step="0.5" value="2"/>
+        </p>
+        <BR>
+        <label>
+          <input type="checkbox" name="showlatlng" id="showlatlng" value="yes" class="filled-in" />
+          <span>Show Lat Lng data</span>
+        </label><BR>
+        <BR><BR>
+	<a href="javascript:ghEmakiDownloadReport();"><i class="material-icons left">file_download</i>Download Report</a>
+        <BR><BR>
+	<a href="javascript:ghEmakiDownloadUnitSheet();"><i class="material-icons left">file_download</i>Download Unit Sheet</a>
+      </div>
+      <div id="tabsound" class="col s12">
+	<BR>
+        <label>
+          <input type="checkbox" name="enablebgm" id="enablebgm" value="yes" class="filled-in" /> <!-- default OFF -->
+          <span data-t="emaki2d.enablebgm"></span>
+        </label><BR>
+	<label>
+	  <input type="radio" class="with-gap" name="enablebgmradio" id="enablebgmradioa" value="bgm_a" checked/> 
+	  <span>airport attack</span>
+	</label><BR>
+	<label>
+	  <input type="radio" class="with-gap" name="enablebgmradio" id="enablebgmradiob" value="bgm_b"/> 
+	  <span>deck fight</span>
+	</label>
+	<label><BR>
+	  <input type="radio" class="with-gap" name="enablebgmradio" id="enablebgmradiob" value="bgm_c"/> 
+	  <span>railgun rain</span>
+	</label><BR>
+        <BR><BR>
+        <label>
+          <input type="checkbox" name="enablese" id="enablese" value="yes" class="filled-in" /> <!-- default OFF -->
+          <span data-t="emaki2d.enablese"></span>
+        </label><BR>
+        <BR>
+        volume
+        <p class="range-field">
+          <input type="range" name="soundvolume" id="soundvolume" min="0" max="100" step="1" value="10"/>
+        </p>
+        <BR>
+      </div>
+    </div>
+  </div>
+  <!-- Left Side Nav -->
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <!--   <div id="marquee" style="color: rgba(255,255,255,0.8);padding-left: 6px;"> _____ </div> -->
+    <div class="row">
+      <div class="col l2 m3 s4">
+	<i class="material-icons">supervisor_account</i><span data-t="emaki2d.unit"></span><BR>
+	<a href="javascript:ghOnClickTargetIcon()"><img id="commandtargeticon" src="../images/Geoglyph-logo-s-l.png"></a>
+	<span id="commandtargettext" style="font-size:large;font-weight:bold;"></span><BR>
+	<span id="commandtargetdescription"></span>
+	<!--   some infomation icons -->
+	<input type="hidden" id="commandtargetkey" name="commandtargetkey" value="">
+	<BR>
+      </div>
+      <div class="col l2 m3 s4" id="commandcolumn">
+	<table style="border:0px;height:80px;">
+	  <TR style="border-bottom:initial;">
+	    <TD style="padding:0px;">
+	      <label>
+		<input type="radio" class="with-gap" name="command2radio" id="command2radiomove" value="move"/> 
+		<span>Move</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label>
+		<input type="radio" class="with-gap" name="command2radio" id="command2radioattack" value="attack"/> 
+		<span>Attack</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      </label>
+	  </TR>
+	  <TR style="border-bottom:initial;">
+	    <TD style="padding:0px;">
+	      <label>
+		<input type="radio" class="with-gap" name="command2radio" id="command2radiowait" value="wait"/> 
+		<span>Wait</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label>
+		<input type="radio" class="with-gap" name="command2radio" id="command2radioweapon" value="weapon"/> 
+		<span>Weapon</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      </label>
+	  </TR>
+	  <TR style="border-bottom:initial;">
+	    <TD style="padding:0px;">
+	      <label>
+		<input type="radio" class="with-gap" name="command2radio" id="command2radioreplenish" value="replenish"/> 
+		<span>Replenish</span>
+	      </label>
+	    <TD style="padding:0px;">
+	      <label>
+		<input type="radio" class="with-gap" name="command2radio" id="command2radioformation" value="formation"/> 
+		<span>Formation</span>
+	      </label>
+	  </TR>	      
+	</table>
+      </div>
+      <div class="col l1 m2 s4" id="movecolumn">
+	<i class="tiny material-icons">bolt</i><span>Move</span><BR>
+	<label>
+	  <input type="radio" class="with-gap" name="command2move" id="command2move2route" value="route"/> 
+	  <span>Route</span>
+	</label>
+	<label>
+	  <input type="radio" class="with-gap" name="command2move" id="command2move2chase" value="chase"/> 
+	  <span>Chase</span>
+	</label>
+      </div>
+      <div class="col l1 m2 s4" id="speedcolumn">
+	<i class="tiny material-icons">speedometer</i><BR><span data-t="emaki2d.speed">Speed</span>
+	<div id="movespeed">
+	  <input type="number" id="movespeednumber" name="movespeed" min="1" max="60" step="1" value="4">
+	</div>
+      </div>
+      <div class="col l1 m2 s4" id="attackcolumn">
+	<i class="tiny material-icons">near_me</i><span data-t="emaki2d.actionattack"></span><BR>
+	<label>
+          <input  name="command2attack"  type="checkbox" class="filled-in"  id="command2attack" value="target"/>
+          <span data-t="emaki2d.setattacktarget"></span>
+	</label>
+      </div>
+      <div class="col l1 m2 s4" id="targetcolumn_movechase">
+	<i class="tiny material-icons">gps_fixed</i><span data-t="emaki2d.target"></span><BR>
+	<div id="actiontargettile_movechase">
+	  <div id="actiontargettext_movechase" style="font-size:large;"></div>
+	</div>
+	<input type="hidden" id="actiontargetkey_movechase" name="actiontargetkey" value="">
+	<input type="hidden" id="actiontargettype_movechase" name="actiontargetkeytype" value="">
+      </div>
+      <div class="col l1 m2 s4" id="targetcolumn_attack">
+	<i class="tiny material-icons">gps_fixed</i><span data-t="emaki2d.target"></span><BR>
+	<div id="actiontargettile_attack">
+	  <div id="actiontargettext_attack" style="font-size:large;"></div>
+	</div>
+	<input type="hidden" id="actiontargetkey_attack" name="actiontargetkey" value="">
+	<input type="hidden" id="actiontargettype_attack" name="actiontargetkeytype" value="">
+      </div>
+      <div class="col l1 m2 s4" id="weaponcolumn">
+	<i class="tiny material-icons">security</i><span data-t="emaki2d.weapons"></span>
+	<select id="weaponselect" class="browser-default">
+	  <!--
+	  <option value="0">Paralell</option>
+	  -->
+	</select>
+      </div>
+      <div class="col l1 m2 s4" id="formationcolumn">
+	<i class="tiny material-icons">view_comfy</i><span data-t="emaki2d.formation"></span>
+	<select id="formationselect" class="browser-default">
+	  <!--
+	  <option value="0">Paralell </option>
+	  -->
+	</select>
+      </div>
+      <div class="col l1 m2 s4" id="executecolumn">
+	<BR>
+	<a class="waves-light btn-small disabled" onClick="ghOnClickCommandButton('execplay');" id="commandbtn_execplay">
+	  <i class="material-icons left">keyboard_command_key</i>
+	  <span data-t="emaki2d.execute" style="font-size:8px"></span>
+	</a>
+	<div id="commandbtn_message" style="font-size:8px"></div>
+      </div>
+    </div>    
+    <div class="footer-copyright">
+      <div class="container">
+        © 2022 Copyright Geoglyph Emaki
+        <a class="grey-text text-lighten-4 right" href="index.html"  data-t="emaki2d.home">HOME</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- Start Modal Structure -->
+<!--  <div id="modal01" class="modal" style="height:300px;width:500px;">
+    <div class="modal-content">
+      <h4 data-t="emaki2d.mapselect"></h4>
+      <div class="input-field col s12">
+        <select id="fieldname" name="fieldname">
+          <option value="" disabled selected data-t="emaki2d.selectmap"></option>
+	  <option value="borodino.en.json">Battle of Borodino, Russia 1812</option>
+	  <option value="kyivsurrounded.en.json">Kyiv Surrounded, Ukraine 2022</option>
+          <option value="okehazama.ja.json">Okehazama, Japan 1560</option>
+	</select>
+      </div>
+      <BR>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat" data-t="modal.close"></a>
+        <a href="javascript:ghLoadHistoryData();" id="loadbutton" class="modal-close waves-effect waves-green btn-flat" data-t="emaki2d.load"></a>
+      </div>
+    </div>
+  </div>
+  Start Modal Structure -->
+  <div id="modal01" class="modal" style="height:200px;width:400px;">
+    <div class="modal-content">
+      <h4 data-t="emaki2d.mapselect"></h4>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat" data-t="modal.close"></a>
+        <a href="emakiselect.html" id="loadbutton" class="modal-close waves-effect waves-green btn-flat" data-t="emaki2d.load"></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Over Modal Structure -->
+  <div id="modalover" class="modal" style="height:370px;width:550px;background-color:#170367;">
+    <div class="modal-content" style="background-image:url('../images/nightcity.png');">
+      <div style="height:230px;width:500px;"><BR></div>
+      <span id="overmessage" style="position:relative;left:10px;color:white;font-size:20px;">SimulationRunning</span>
+      <span id="thanksmessage" style="position:relative;left:110px;color:white;font-size:20px;">Many thanks.</span>
+      <div class="modal-footer" style="background-color:#170367;">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"><span style="color:white;" data-t="modal.close"></span></a>
+      </div>
+    </div>
+  </div>
+  <!-- Game Over Modal Structure -->
+
+  <!-- Message Dialog -->
+  <div id="reportdialog" title="Report Dialog">
+    <!--  <div><i class="material-icons left">message</i>Message</div> -->
+    <textarea id="eventreport" name="eventreport" cols="20" rows="100" style="resize:vertical;height:350px;font-size:10px;"></textarea>
+  </div>
+  <!-- Message Dialog -->
+
+  <!-- Unit Sheet Dialog -->
+  <div id="unitsheetdialog" title="Unit Sheet Dialog">
+    <!--  <div><i class="material-icons left">message</i>Message</div> -->
+    <div id="unitspreadsheet"></div>
+  </div>
+  <!-- Unit Sheet Dialog -->
+
+  <!-- Weapon Sheet Dialog -->
+  <div id="weaponsheetdialog" title="Weapon Sheet Dialog">
+    <div id="weaponspreadsheet"></div>
+  </div>
+  <!-- Weapon Sheet Dialog -->
+
+  <!-- Formation Sheet Dialog -->
+  <div id="formationsheetdialog" title="Formation Sheet Dialog">
+    <div id="formationspreadsheet"></div>
+  </div>
+  <!-- Formation Sheet Dialog -->
+
+  <!-- About Modal Structure -->
+  <div id="gh_aboutmodal" class="modal" style="background:#424242;color:#b0bec5;">
+    <div class="modal-content">
+      <img src="../images/Geoglyph-logo-s-l.png">
+      <h4 data-t="index.messagetitle"></h4>
+      <div id="gh_aboutcontent">
+	<A href="https://earth.geoglyph.info">https://earth.geoglyph.info</a>
+      </div>
+      <table border="0">
+	<TR>
+	  <TD>
+	    Geoglyph Emaki Rev &nbsp;&nbsp;<span id="gh_preperty_emaki"></span><BR>
+	    jQuery Rev &nbsp;&nbsp;<span id="gh_preperty_jquery"></span><BR>
+	    Leaflet Rev &nbsp;&nbsp;<span id="gh_preperty_leaflet"></span><BR>
+	    BGM ( Many thanks )<BR>
+	    &nbsp;&nbsp;<A href="https://opengameart.org/content/airport-attack">Airport Attack</A><BR>
+	    &nbsp;&nbsp;<A href="https://soundcloud.com/palrom">Deck Fight</A><BR>
+	    &nbsp;&nbsp;<A href="https://opengameart.org/content/railgun-rain">Railgun Rain</A><BR>
+	  <TD>
+	    Scene Property<BR>
+	    &nbsp;&nbsp;<span id="gh_preperty_author"></span><BR>
+	    &nbsp;&nbsp;<span id="gh_preperty_mail"></span><BR>
+	    &nbsp;&nbsp;<span id="gh_preperty_datetime"></span><BR>
+	    <!--  <li><div id="gh_preperty_revision"></div> -->
+	</TR>
+      </table>
+    </div>
+    <div class="modal-footer" style="background:#424242;color:#b0bec5;">
+      <i class="material-icons">copyright</i>2022 Geoglyph Project.&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#!" class="modal-close yellow btn-flat" data-t="modal.ok">OK</a>
+    </div>
+  </div>
+  <!-- About Modal Structure -->
+  <script>
+    var GH_LANG = 'en';
+  </script>
+  <script src="../js/turfEmakiLib.min.js"></script>
+
+  <script src="../js/ghEmakiStatus.js"></script>
+  <script src="../js/ghEmakiParams.js"></script>
+  <script src="../js/ghEmakiSharedArray.js"></script>
+  <script src="../js/ghEmakiLang.js"></script>
+  <script src="../js/ghEmakiUtil.js"></script>
+  <script src="../js/ghEmakiClock.js"></script>
+  <script src="../js/ghEmakiBroadcast.js"></script>
+  <script src="../js/ghEmakiSound.js"></script>
+  <script src="../js/ghEmakiTerrain.js"></script>
+  <script src="../js/ghEmakiFormation.js"></script> 
+  <script src="../js/ghEmakiUnit2d.js"></script>
+  <script src="../js/ghEmakiManager2d.js"></script>
+  <script src="../js/ghEmakiMain2d.js"></script>
+<!--
+  <script src="../js/ghEmaki2d.js"></script>
+-->
+</body>
+</html>

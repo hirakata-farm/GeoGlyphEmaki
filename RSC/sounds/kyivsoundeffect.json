@@ -1,0 +1,27 @@
+{
+    "AK74M" : {
+	"url" : "P_34Ps.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    },
+    "T90" : {
+	"url" : "tankren3.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    },
+    "AR10" : {
+	"url" : "P_34Ps.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    },
+    "javelin" : {
+	"url" : "tankren3.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    },
+    "T64" : {
+	"url" : "tankren3.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    }
+}

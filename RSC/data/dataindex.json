@@ -1,0 +1,36 @@
+{
+    "property" : {
+	"revision": 5.1,
+        "author" : "Kamonasu",
+	"mail" : "info@geoglyph.info",
+	"datetime" : "2022-05-19T06:00:01+09:00"
+    },
+    "datalist" : [
+	{
+            "name" : "Battle of Chaeronea, Boeotia 338BC",
+	    "file" : "338BCchaeronea",
+	    "lang" : [ "en" ]
+	},
+	{
+            "name" : "Battle of Mollwitz, Poland 1741",
+	    "file" : "1741mollwitz",
+	    "lang" : [ "en" ]
+	},
+	{
+            "name" : "Battle of Borodino, Russia 1812",
+	    "file" : "1812borodino",
+	    "lang" : [ "en" ]
+	},
+	{
+            "name" : "Kyiv Surrounded, Ukraine 2022",
+	    "file" : "2022kyiv",
+	    "lang" : [ "en" ]
+	},
+	{
+            "name" : "Okehazama, Japan 1560",
+	    "file" : "1560okehazama",
+	    "lang" : [ "ja" ]
+	}
+    ]
+}
+	

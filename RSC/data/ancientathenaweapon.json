@@ -1,0 +1,102 @@
+{
+    "pikemen" : {
+	"index" : 0,
+	"key" : "pikemen",
+        "description" : {
+	    "en" : "Pikemen",
+	    "ja" : "槍兵"
+	},
+	"type" : "spear" ,
+	"range" : 7 ,
+	"rapid" : 0.4,
+	"power" : 4,
+	"regist" : 6,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "spear32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "katana_1.mp3"
+    },
+    "hypaspist" : {
+	"index" : 1,
+	"key" : "hypaspist",
+        "description" : {
+	    "en" : "Hypaspist",
+	    "ja" : "軽装歩兵"
+	},
+	"type" : "spear" ,
+	"range" : 5 ,
+	"rapid" : 0.5,
+	"power" : 3,
+	"regist" : 4,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "hypaspist32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "katana_1.mp3"
+    },
+    "phalanx" : {
+	"index" : 2,
+	"key" : "phalanx",
+        "description" : {
+	    "en" : "Phalanx",
+	    "ja" : "ファランクス"
+	},
+	"type" : "spear" ,
+	"range" : 10 ,
+	"rapid" : 0.5,
+	"power" : 10,
+	"regist" : 10,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "hypaspist32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "katana_1.mp3"
+    },
+    "cavalry" : {
+	"index" : 3,
+	"key" : "cavalry",
+        "description" : {
+	    "en" : "Cavalry",
+	    "ja" : "騎兵"
+	},
+	"type" : "cavalry" ,
+	"range" : 20 ,
+	"rapid" : 0.7,
+	"power" : 20,
+	"regist" : 20,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "cavalry32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "hoplites" : {
+	"index" : 4,
+	"key" : "hoplites",
+        "description" : {
+	    "en" : "Hoplites",
+	    "ja" : "重装歩兵"
+	},
+	"type" : "spear" ,
+	"range" : 8,
+	"rapid" : 1,
+	"power" : 8,
+	"regist" : 5,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "hypaspist32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "katana_1.mp3"
+    }
+}

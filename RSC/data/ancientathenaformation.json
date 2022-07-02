@@ -1,0 +1,36 @@
+{
+    "column" : {
+	"index" : 0,
+	"key" : "column",
+	"description" : {
+	    "en" : "Column",
+	    "ja" : "縦列陣"
+	},
+	"attack" : 3,
+	"defense" : 3,
+	"skill" : []
+    },
+    "line" : {
+	"index" : 1,
+	"key" : "line",
+        "description" : {
+	    "en" : "Line",
+	    "ja" : "横列陣"
+	},
+	"attack" : 10,
+	"defense" : 8,
+	"skill" : []
+    },
+    "square" : {
+	"index" : 2,
+	"key" : "square",
+        "description" : {
+	    "en" : "Square",
+	    "ja" : "方形陣"
+	},
+	"attack" : 5,
+	"defense" : 5,
+	"skill" : []
+    }
+}
+

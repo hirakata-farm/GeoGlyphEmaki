@@ -1,0 +1,82 @@
+{
+    "sword" : {
+	"index" : 0,
+	"key" : "sword",
+        "description" : {
+	    "en" : "Sword",
+	    "ja" : "刀"
+	},
+	"type" : "sword" ,
+	"range" : 2,
+	"rapid" : 0.5,
+	"power" : 7,
+	"regist" : 8,
+	"comsumption" : 0,
+	"icon" : {
+	    "image" : "sword32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "katana_1.mp3"
+    },
+    "bow" : {
+	"index" : 1,
+	"key" : "bow",
+        "description" : {
+	    "en" : "Bow",
+	    "ja" : "弓"
+	},
+	"type" : "bow" ,
+	"range" : 60 ,
+	"rapid" : 1,
+	"power" : 5,
+	"regist" : 5,
+	"comsumption" : 10,
+	"icon" : {
+	    "image" : "bow32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "katana_1.mp3"
+    },
+    "matchlock" : {
+	"index" : 2,
+	"key" : "matchlock",
+        "description" : {
+	    "en" : "Matchlock",
+	    "ja" : "火縄銃"
+	},
+	"type" : "gun" ,
+	"range" : 200 ,
+	"rapid" : 8,
+	"power" : 26,
+	"regist" : 5,
+	"comsumption" : 3,
+	"icon" : {
+	    "image" : "musket32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "P_34Ps.mp3"
+    },
+    "cannon" : {
+	"index" : 3,
+	"key" : "cannon",
+        "description" : {
+	    "en" : "Cannon",
+	    "ja" : "大砲"
+	},
+	"type" : "cannon" ,
+	"range" : 500,
+	"rapid" : 10,
+	"power" : 50,
+	"regist" : 1,
+	"comsumption" : 10,
+	"icon" : {
+	    "image" : "cannon32.png" ,
+	    "width" : 32,
+	    "height" : 32
+	},
+	"soundeffect" : "tankren3.mp3"
+    }
+}

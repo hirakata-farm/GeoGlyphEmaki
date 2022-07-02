@@ -1,0 +1,17 @@
+{
+    "sword" : {
+	"url" : "katana_1.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    },
+    "bow" : {
+	"url" : "katana_1.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    },
+    "cannon" : {
+	"url" : "tankren3.mp3",
+	"type" : "effect",
+	"defaultloop" : false
+    }
+}
