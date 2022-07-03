@@ -31,9 +31,7 @@
 //
 
 // Your access token can be found at: https://cesium.com/ion/tokens.
-//Cesium.Ion.defaultAccessToken = '___CESIUM_TOKEN___';
-Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIzOTYzMmMyNy1hMThjLTQxNzktYTFmZi00NDM2NzYwZWUxMGEiLCJpZCI6NDk0LCJpYXQiOjE1MjUyNTUyNDh9.P2ujgx_ju_p_xJYR3-pIQ1O6LV9rD0x3Hg6S8VpixZ0';
-
+Cesium.Ion.defaultAccessToken = '___CESIUM_TOKEN___';
 
 // https://github.com/CesiumGS/cesium/issues/8959
 Cesium.ModelOutlineLoader.hasExtension = function() { return false; }
